@@ -1,0 +1,20 @@
+.HomeHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1380px;
+    border-bottom: 1px solid #F0F0F0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1380px;
+}
