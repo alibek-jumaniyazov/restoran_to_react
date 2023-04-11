@@ -1,7 +1,8 @@
 export default function OnePizza({ item }) {
     return (
         <div className="OnePizza">
-            <p className="xit">NEW</p>
+            {/* <p className="xit">{item.new}</p>
+            <p className="xit">{item.xit}</p> */}
             <img src={item.img} alt="" />
             <div className="pizzaInfo">
                 <p>{item.name}</p>

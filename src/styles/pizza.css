@@ -55,6 +55,7 @@
     width: 69%;
 }
 .OnePizza {
+    position: relative;
     width: 300px;
     height: 480px;
     background: #FFFFFF;
@@ -67,7 +68,24 @@
     gap: 10px
     
 }
-
+.xit{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: #E23535;
+    height: 32px;
+    width: 65px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
 .pizzaInfo {
     padding: 20px;
     display: flex;
