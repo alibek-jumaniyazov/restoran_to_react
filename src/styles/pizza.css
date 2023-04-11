@@ -1,0 +1,47 @@
+.Pizza {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.AllPizza {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.PizzaHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 66%;
+}
+
+.PizzaHeader h1 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: #191919;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 16px;
+    gap: 8px;
+    width: 126px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    border-radius: 6px;
+    cursor: pointer;
+}

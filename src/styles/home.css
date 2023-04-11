@@ -1,0 +1,152 @@
+.Home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.Box {
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    height: 104px;
+    width: 135px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.Box:hover {
+    transform: translateY(-5px);
+    transition: all 0.4s ease;
+}
+
+.Box:hover .boxName {
+    color: #E23535;
+}
+
+.boxName {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #191919;
+    transition: all 0.4s ease;
+
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 104px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.Sale {
+    position: relative;
+    display: flex;
+    margin: 15px;
+    height: 343px;
+    width: 300px;
+    border-radius: 12px;
+}
+
+.saleBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0px;
+    width: 76%;
+}
+
+.Sale img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.Sale p {
+    z-index: 299;
+    position: absolute;
+    width: 240px;
+    height: 56px;
+    left: 15px;
+    top: 257px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.Location {
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    border-radius: 8px;
+    height: 80px;
+    width: 1290px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.Location p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #191919;
+}
+
+.locationInput {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    border-radius: 6px;
+    height: 48px;
+    width: 783px;
+    border-radius: 6px;
+    padding: 10px;
+
+}
+
+.locationInput input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 17px;
+}
+
+.locationInput input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #A5A5A5;
+}
+
+.Location_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 48px;
+    background: #FF7010;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    cursor: pointer;
+}

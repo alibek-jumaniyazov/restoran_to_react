@@ -1,20 +1,162 @@
-.HomeHeader{
+.HomeHeader {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
+    background-color: #FFFFFF;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1380px;
-    border-bottom: 1px solid #F0F0F0;
+    width: 66%;
+    height: 35px;
+
 }
-header{
+
+hr {
+    border: 1px solid #F0F0F0;
+    width: 100%;
+    height: 1px;
+}
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1380px;
+    height: 64px;
+    width: 67%;
+}
+
+.place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.locatio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.navP {
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #191919;
+}
+
+.delivery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.delivery span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #191919;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.accaunt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.logoName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.shopCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+    background: #FF7010;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+}
+
+.shopCard:active {
+    scale: 80%;
+    transition: all 0.4s ease;
+}
+
+.shopCard p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.shopCard span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.item {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #191919;
+    transition: all 0.4s ease;
+    display: inline-block;
+    position: relative;
+
+}
+.item:hover{
+    transition: all 0.4s ease;
+}
+
+.item::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition:  transform 0.5s ease-out;
+
+}
+.item:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
