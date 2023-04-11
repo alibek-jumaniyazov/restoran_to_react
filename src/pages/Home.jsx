@@ -20,29 +20,37 @@ export default function Home() {
   const [box, setBox] = useState([
     {
       img: aksiya,
-      name: "Акции"
+      name: "Акции",
+      link:'/pizza'
     },
     {
       img: pizza,
-      name: "Пицца"
+      name: "Пицца",
+      link:'/pizza'
     }, {
       img: sushi,
-      name: "Суши"
+      name: "Суши",
+      link:'/pizza'
     }, {
       img: cola,
-      name: "Напитки"
+      name: "Напитки",
+      link:'/pizza'
     }, {
       img: kartoshka,
-      name: "Закуски"
+      name: "Закуски",
+      link:'/pizza'
     }, {
       img: kombo,
-      name: "Комбо"
+      name: "Комбо",
+      link:'/pizza'
     }, {
       img: disert,
-      name: "Десерты"
+      name: "Десерты",
+      link:'/pizza'
     }, {
       img: sous,
-      name: "Соусы"
+      name: "Соусы",
+      link:'/pizza'
     },
   ])
 
