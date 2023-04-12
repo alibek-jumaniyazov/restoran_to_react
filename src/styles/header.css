@@ -167,10 +167,13 @@ header {
 
 .karzinka {
     width: 420px;
-    height: 945px;
+    height: 100%;
     display: flex;
     background: #FFFFFF;
     position: absolute;
     top: 0;
     right: 0;
+}
+.overfolw{
+    overflow: hidden;
 }

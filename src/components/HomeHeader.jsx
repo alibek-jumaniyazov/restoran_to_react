@@ -14,6 +14,7 @@ export default function HomeHeader() {
 
     function addKarzinka(){
         setKarzinkADiv('add')
+        // body.classList.add('overfolw')
     }
 
 
