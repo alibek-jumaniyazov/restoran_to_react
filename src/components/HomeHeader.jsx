@@ -4,8 +4,20 @@ import logo from '../images/Group 2.svg'
 import kazina from '../images/Shopping bag.svg'
 import LogoName from '../images/Group 152.svg'
 import down from '../images/Arrow down.svg'
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
+
 
 export default function HomeHeader() {
+
+    const  [karzinkaDiv , setKarzinkADiv] = useState('allBox')
+
+    function addKarzinka(){
+        setKarzinkADiv('add')
+    }
+
+
+
     return (
         <div className="HomeHeader">
             <nav>
@@ -31,15 +43,22 @@ export default function HomeHeader() {
             </nav>
             <hr />
             <header>
-                <div className="logoName">
-                    <img src={LogoName} alt="" />
-                </div>
-                <div className="shopCard">
+                <Link to={"/"}>
+                    <div className="logoName">
+                        <img src={LogoName} alt="" />
+                    </div>
+                </Link>
+                <div onClick={() => addKarzinka()} className="shopCard">
                     <img src={kazina} alt="" />
                     <p>0</p>
                     <span>₽</span>
                 </div>
             </header>
+            <div className={karzinkaDiv}>
+                <div className="karzinka">
+                    
+                </div>
+            </div>
         </div>
     )
 }

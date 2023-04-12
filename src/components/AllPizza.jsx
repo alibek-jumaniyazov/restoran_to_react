@@ -1,12 +1,14 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import filterIcon from '../images/Group 93.svg'
 import pizza1 from '../images/Rectangle 4.svg'
 import OnePizza from './OnePizza'
 
-export default function AllPizza() {
+export default function AllPizza({sliceData}) {
+    console.log(sliceData);
 
     const [pizza , setPizza] = useState([
         {
+            id:1,
             img:pizza1,
             name:"Чикен Сладкий Чили",
             info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
@@ -14,55 +16,7 @@ export default function AllPizza() {
             xit:"ХИТ"
         },
         {
-            img:pizza1,
-            name:"Чикен Сладкий Чили",
-            info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price:399,
-            xit:"ХИТ"
-
-        },
-        {
-            img:pizza1,
-            name:"Чикен Сладкий Чили",
-            info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price:399,
-            new:"NEW"
-
-        },
-        {
-            img:pizza1,
-            name:"Чикен Сладкий Чили",
-            info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price:399,
-            new:"NEW"
-
-        },
-        {
-            img:pizza1,
-            name:"Чикен Сладкий Чили",
-            info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price:399,
-        },
-        {
-            img:pizza1,
-            name:"Чикен Сладкий Чили",
-            info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price:399,
-        },
-        {
-            img:pizza1,
-            name:"Чикен Сладкий Чили",
-            info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price:399,
-        },
-        {
-            img:pizza1,
-            name:"Чикен Сладкий Чили",
-            info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price:399,
-            xit:"ХИТ"
-        },
-        {
+            id:2,
             img:pizza1,
             name:"Чикен Сладкий Чили",
             info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
@@ -71,6 +25,7 @@ export default function AllPizza() {
 
         },
         {
+            id:3,
             img:pizza1,
             name:"Чикен Сладкий Чили",
             info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
@@ -79,6 +34,7 @@ export default function AllPizza() {
 
         },
         {
+            id:4,
             img:pizza1,
             name:"Чикен Сладкий Чили",
             info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
@@ -87,6 +43,70 @@ export default function AllPizza() {
 
         },
         {
+            id:5,
+            img:pizza1,
+            name:"Чикен Сладкий Чили",
+            info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+            price:399,
+        },
+        {
+            id:6,
+            img:pizza1,
+            name:"Чикен Сладкий Чили",
+            info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+            price:399,
+        },
+        {
+            id:7,
+            img:pizza1,
+            name:"Чикен Сладкий Чили",
+            info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+            price:399,
+        },
+        {
+            id:8,
+            img:pizza1,
+            name:"Чикен Сладкий Чили",
+            info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+            price:399,
+            xit:"ХИТ"
+        },
+        {
+            id:9,
+            img:pizza1,
+            name:"Чикен Сладкий Чили",
+            info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+            price:399,
+            xit:"ХИТ"
+
+        },
+        {
+            id:10,
+            img:pizza1,
+            name:"Чикен Сладкий Чили",
+            info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+            price:399,
+            new:"NEW"
+
+        },
+        {
+            id:11,
+            img:pizza1,
+            name:"Чикен Сладкий Чили",
+            info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+            price:399,
+            new:"NEW"
+
+        },
+        {
+            id:12,
+            img:pizza1,
+            name:"Чикен Сладкий Чили",
+            info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+            price:399,
+        },
+        {
+            id:13,
             img:pizza1,
             name:"Чикен Сладкий Чили",
             info:"Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
@@ -94,6 +114,13 @@ export default function AllPizza() {
         },
 
     ])
+    
+
+    const  [div , setDiv] = useState('allBox')
+
+    function kz(){
+        setDiv('add')
+    }
 
     return (
         <div className="AllPizza">
@@ -105,12 +132,21 @@ export default function AllPizza() {
                 </a>
             </div>
             <div className="Pizzas">
+                
                 {
-                    pizza.map((item) =>(
-                        <OnePizza item={item}/>
+                    sliceData ? 
+                    pizza.slice(0,sliceData).map((item, index) =>(
+                        <OnePizza kz={kz} item={item}/>
+                    ))
+                    :
+                    pizza.map((item, index) =>(
+                        <OnePizza kz={kz} item={item}/>
                     ))
                 }
             </div>
-        </div>
+            <div  className={div}>
+                <button>Add</button>
+            </div>
+        </div>  
     )
 }

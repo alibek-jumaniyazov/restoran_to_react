@@ -71,6 +71,9 @@ export default function Home() {
       name: "Кэшбек 10% на самовывоз (доставка)"
     }, 
   ])
+
+  
+
   return (
     <div className="Home">
       <HomeHeader />
@@ -89,7 +92,7 @@ export default function Home() {
           }
         </div>
         <Location/>
-        <AllPizza/>
+        <AllPizza sliceData={8} />
     </div>
   )
 }

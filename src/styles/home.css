@@ -149,4 +149,10 @@
     line-height: 22px;
     color: #FFFFFF;
     cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.Location_btn:active{
+    scale: 80%;
+    transition: all 0.4s ease;
 }
