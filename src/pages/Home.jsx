@@ -21,36 +21,36 @@ export default function Home() {
     {
       img: aksiya,
       name: "Акции",
-      link:'/pizza'
+      link: '/pizza'
     },
     {
       img: pizza,
       name: "Пицца",
-      link:'/pizza'
+      link: '/pizza'
     }, {
       img: sushi,
       name: "Суши",
-      link:'/pizza'
+      link: '/pizza'
     }, {
       img: cola,
       name: "Напитки",
-      link:'/pizza'
+      link: '/pizza'
     }, {
       img: kartoshka,
       name: "Закуски",
-      link:'/pizza'
+      link: '/pizza'
     }, {
       img: kombo,
       name: "Комбо",
-      link:'/pizza'
+      link: '/pizza'
     }, {
       img: disert,
       name: "Десерты",
-      link:'/pizza'
+      link: '/pizza'
     }, {
       img: sous,
       name: "Соусы",
-      link:'/pizza'
+      link: '/pizza'
     },
   ])
 
@@ -69,30 +69,44 @@ export default function Home() {
     }, {
       img: iconbg2,
       name: "Кэшбек 10% на самовывоз (доставка)"
-    }, 
+    },
   ])
 
-  
+  const [karzinka, setKarzinka] = useState(JSON.parse(localStorage.getItem('add')) || [])
+
+  localStorage.setItem('add', JSON.stringify(karzinka))
+
+
+  function addProduct(id, img, name, info, price, xit) {
+    setKarzinka(value => [...value, {
+      id: id,
+      img: img,
+      name: name,
+      info: info,
+      price: price,
+      xit: xit,
+    }])
+  }
 
   return (
     <div className="Home">
-      <HomeHeader />
+      <HomeHeader karzinka={karzinka} />
       <div className="boxes">
         {
           box.map((item) => (
-            <Box item={item}/>
+            <Box item={item} />
           ))
         }
       </div>
-        <div className="saleBox">
-          {
-            Salebox.map((add) => (
-              <Sale add={add} />
-            ))
-          }
-        </div>
-        <Location/>
-        <AllPizza sliceData={8} />
+      <div className="saleBox">
+        {
+          Salebox.map((add) => (
+            <Sale add={add} />
+          ))
+        }
+      </div>
+      <Location />
+      <AllPizza sliceData={8} addProduct={addProduct} />
     </div>
   )
 }

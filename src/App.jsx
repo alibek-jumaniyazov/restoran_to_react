@@ -6,12 +6,12 @@ import Pizza from "./pages/Pizza";
 function App() {
   return (
     <div className="App">
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
       <div className="container">
         <Routes>
-          <Route path="/pizza" element={<Pizza/>}/>
+          <Route path="/pizza" element={<Pizza />} />
         </Routes>
       </div>
 

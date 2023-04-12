@@ -6,12 +6,12 @@ import './styles/app.css'
 import './styles/home.css'
 import './styles/pizza.css'
 import './styles/header.css'
-import { type } from '@testing-library/user-event/dist/type';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <App />  
+    <App />
   </BrowserRouter>
 );
 

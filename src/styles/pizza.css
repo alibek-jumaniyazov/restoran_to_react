@@ -46,7 +46,8 @@
     border-radius: 6px;
     cursor: pointer;
 }
-.Pizzas{
+
+.Pizzas {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -54,6 +55,7 @@
     flex-wrap: wrap;
     width: 69%;
 }
+
 .OnePizza {
     position: relative;
     width: 300px;
@@ -66,9 +68,9 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 10px
-    
 }
-.xit{
+
+.xit {
     position: absolute;
     top: 30px;
     left: 0;
@@ -86,6 +88,7 @@
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
+
 .pizzaInfo {
     padding: 20px;
     display: flex;
@@ -131,10 +134,12 @@
     cursor: pointer;
     transition: all 0.4s ease;
 }
-.btnPizza:active{
+
+.btnPizza:active {
     scale: 80%;
     transition: all 0.4s ease;
 }
+
 .addBtn h3 {
     font-weight: 600;
     font-size: 18px;
@@ -144,10 +149,12 @@
     text-align: right;
     color: #FF7010;
 }
-.allBox{
+
+.allBox {
     display: none;
 }
-.add{
+
+.add {
     display: flex;
     position: fixed;
     top: 0;
@@ -158,4 +165,3 @@
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
-

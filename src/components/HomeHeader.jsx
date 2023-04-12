@@ -1,6 +1,6 @@
 import location from '../images/Location.svg'
 import user from '../images/Account.svg'
-import logo from '../images/Group 2.svg'
+import x from '../images/Union.svg'
 import kazina from '../images/Shopping bag.svg'
 import LogoName from '../images/Group 152.svg'
 import down from '../images/Arrow down.svg'
@@ -8,16 +8,30 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
 
-export default function HomeHeader() {
+export default function HomeHeader({ karzinka, }) {
 
-    const  [karzinkaDiv , setKarzinkADiv] = useState('allBox')
+    const [karzinkaDiv, setKarzinkADiv] = useState('allBox')
 
-    function addKarzinka(){
+    function addKarzinka() {
         setKarzinkADiv('add')
         // body.classList.add('overfolw')
     }
 
+    function Close() {
+        setKarzinkADiv('allBox')
+    }
 
+
+    const [son, setSon] = useState(1)
+
+
+    function Minus() {
+        setSon(son - 1)
+    }
+
+    function Pilus() {
+        setSon(son + 1)
+    }
 
     return (
         <div className="HomeHeader">
@@ -57,7 +71,32 @@ export default function HomeHeader() {
             </header>
             <div className={karzinkaDiv}>
                 <div className="karzinka">
-                    
+                    <div className="karzinkaHeader">
+                        <h1>Ваш заказ</h1>
+                        <img onClick={() => Close()} src={x} alt="" />
+                    </div>
+                    <div className="products">
+                        {
+                            karzinka.map((add) => (
+                                <div className="product">
+                                    <img src={add.img} alt="" />
+                                    <div className="productInfos">
+                                        <div className="karzinkaInfo">
+                                            <p>{add.name}</p>
+                                            <span>{add.info}</span>
+                                        </div>
+                                        <div className="ProductPrice">
+                                            <div className='productCounter'>
+                                                <span onClick={() => Minus()}>-</span>  <p>{son}</p> <span onClick={() => Pilus()} >+</span>
+                                            </div>
+                                            <span>{`${add.price * son} ₽`}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        }
+
+                    </div>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@ export default function OnePizza({ item , kz }) {
                 <p>{item.name}</p>
                 <span>{item.info}</span>
                 <div className="addBtn">
-                    <a onClick={() =>kz()} className="btnPizza">Выбрать</a>
+                    <a onClick={() =>kz(item.id , item.img , item.name , item.info , item.price)} className="btnPizza">Выбрать</a>
                     <h3>от {item.price} ₽</h3>
                 </div>
             </div>
