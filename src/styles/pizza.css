@@ -165,3 +165,176 @@
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
+
+.productAddToCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1070px;
+    height: 680px;
+    background: #FFFFFF;
+    border-radius: 24px;
+    gap: 30px;
+}
+
+.addCardInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.addCardInfo p {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #191919;
+}
+
+.savzavot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.savzavotBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.savzavotBorder {
+    width: 105px;
+    height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    border-radius: 12px;
+}
+
+.savzavotBox p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #191919;
+}
+
+.div1Box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    width: 480px;
+    border-radius: 6px;
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+}
+
+.div1Box p {
+    border: 1px solid #F0F0F0;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #191919;
+    height: 48px;
+    width: 240px;
+    cursor: pointer;
+}
+
+.pizzaSize {
+    background: #FFFFFF;
+    height: 44px;
+    width: 480px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #F0F0F0;
+}
+
+.pizzaSize p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #191919;
+    height: 44px;
+    width: 159.08572387695312px;
+    border-radius: 6px;
+}
+
+.priceBox {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FF7010;
+}
+
+.priceAdnAdd {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.priceAdnAdd p {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 28px;
+
+
+    color: #FF7010;
+
+}
+
+.priceAdnAdd span {
+    padding: 13px 40px;
+    gap: 10px;
+    width: 155px;
+    height: 48px;
+    background: #FF7010;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+
+}
+
+.pizzaBig{
+    width: 450px;
+    height: 450px;
+}
+.aa {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 100px auto;
+    z-index: 999999999;
+}
+
+.aa img {
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.aa img:active {
+    transition: all 0.4s ease;
+    scale: 80%;
+}

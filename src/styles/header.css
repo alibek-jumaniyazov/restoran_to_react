@@ -209,7 +209,14 @@ header {
     flex-direction: column;
     gap: 30px;
 }
+::-webkit-scrollbar{
+    width: 0px;
 
+}
+::-webkit-scrollbar-thumb{
+    background-color: #FF7010;
+    border-radius: 10%;
+}
 .products {
     display: flex;
     justify-content: flex-start;

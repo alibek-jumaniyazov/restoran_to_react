@@ -2,7 +2,8 @@ import { useRef, useState } from 'react'
 import filterIcon from '../images/Group 93.svg'
 import pizza1 from '../images/Rectangle 4.svg'
 import OnePizza from './OnePizza'
-
+import x from '../images/Cross.svg'
+import sir from '../images/Group 83.svg'
 export default function AllPizza({ sliceData, addProduct }) {
     console.log(sliceData);
 
@@ -124,6 +125,14 @@ export default function AllPizza({ sliceData, addProduct }) {
 
     }
 
+    function Closed1() {
+        setDiv('allBox')
+    }
+
+    function Closed2() {
+        setDiv('allBox')
+    }
+
     function productADD() {
         setDiv('allBox')
     }
@@ -151,7 +160,90 @@ export default function AllPizza({ sliceData, addProduct }) {
                 }
             </div>
             <div className={div}>
-                <button onClick={() => productADD()}>Add</button>
+                <div className="aa">
+                    <div className="productAddToCard">
+                        <img className='pizzaBig' src={pizza1} alt="" />
+                        <div className="addCardInfo">
+                            <p>Пепперони по-деревенски</p>
+                            <div className="savzavot">
+                                <div className="savzavotBox">
+                                    <div className="savzavotBorder">
+                                        <img src={sir} alt="" />
+                                    </div>
+
+                                    <p>Моцарелла</p>
+                                </div>
+                                <div className="savzavotBox">
+                                    <div className="savzavotBorder">
+                                        <img src={sir} alt="" />
+                                    </div>
+
+                                    <p>Моцарелла</p>
+                                </div>
+                                <div className="savzavotBox">
+                                    <div className="savzavotBorder">
+                                        <img src={sir} alt="" />
+                                    </div>
+
+                                    <p>Моцарелла</p>
+                                </div>
+                                <div className="savzavotBox">
+                                    <div className="savzavotBorder">
+                                        <img src={sir} alt="" />
+                                    </div>
+
+                                    <p>Моцарелла</p>
+                                </div>
+                            </div>
+                            <div className="div1Box">
+                                <p>Традиционное</p>
+                                <p>Тонкое</p>
+                            </div>
+                            <div className="pizzaSize">
+                                <p>20 см</p>
+                                <p>28 см</p>
+                                <p>33 см</p>
+                            </div>
+                            <div className="savzavot">
+                                <div className="savzavotBox">
+                                    <div className="savzavotBorder">
+                                        <img src={sir} alt="" />
+                                    </div>
+                                    <p>Моцарелла</p>
+                                    <div className="priceBox">59 ₽</div>
+                                </div>
+                                <div className="savzavotBox">
+                                    <div className="savzavotBorder">
+                                        <img src={sir} alt="" />
+                                    </div>
+                                    <p>Моцарелла</p>
+                                    <div className="priceBox">59 ₽</div>
+                                </div>
+                                <div className="savzavotBox">
+                                    <div className="savzavotBorder">
+                                        <img src={sir} alt="" />
+                                    </div>
+                                    <p>Моцарелла</p>
+                                    <div className="priceBox">59 ₽</div>
+                                </div>
+                                <div className="savzavotBox">
+                                    <div className="savzavotBorder">
+                                        <img src={sir} alt="" />
+                                    </div>
+                                    <p>Моцарелла</p>
+                                    <div className="priceBox">59 ₽</div>
+                                </div>
+                            </div>
+                            <div className="priceAdnAdd">
+                                <p>Итого: 379 ₽</p>
+                                <span onClick={() => productADD()}>Add</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img onClick={() => Closed1()} src={x} alt="" />
+                </div>
+
+
             </div>
         </div>
     )
