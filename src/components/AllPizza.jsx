@@ -15,33 +15,36 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             name: "Чикен Сладкий Чили",
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
-            xit: "ХИТ"
+            xit: "ХИТ",
+            gramm:400
         },
         {
             id: 2,
             img: pizza2,
-            name: "Чикен Сладкий Чили",
-            info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: 399,
-            xit: "ХИТ"
+            name: "EASY PEASY огуречный расколбас",
+            info: "Курица, Лук, Перец Халапеньо...",
+            price: 549,
+            xit: "ХИТ",
+            gramm:400
 
         },
         {
             id: 3,
             img: pizza1,
-            name: "Чикен Сладкий Чили",
-            info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: 399,
-            new: "NEW"
-
+            name: "EASY PEASY чикен а-ля хрен",
+            info: "Курица, Лук, Соус Карбонара,...",
+            price: 249,
+            new: "NEW",
+            gramm:400
         },
         {
             id: 4,
             img: pizza1,
-            name: "Чикен Сладкий Чили",
-            info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: 399,
-            new: "NEW"
+            name: "4 сезона",
+            info: "Бекон, Ветчина, Грибы, Курица, Лук, Маслины, Огурцы мари...",
+            price: 630,
+            new: "NEW",
+            gramm:400
 
         },
         {
@@ -50,6 +53,8 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             name: "Чикен Сладкий Чили",
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
+            xit: "ХИТ",
+            gramm:400
         },
         {
             id: 6,
@@ -57,6 +62,8 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             name: "Чикен Сладкий Чили",
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
+            xit: "ХИТ",
+            gramm:400
         },
         {
             id: 7,
@@ -64,6 +71,8 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             name: "Чикен Сладкий Чили",
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
+            xit: "ХИТ",
+            gramm:400
         },
         {
             id: 8,
@@ -71,7 +80,8 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             name: "Чикен Сладкий Чили",
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
-            xit: "ХИТ"
+            xit: "ХИТ",
+            gramm:400
         },
         {
             id: 9,
@@ -79,33 +89,40 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             name: "Чикен Сладкий Чили",
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
-            xit: "ХИТ"
+            xit: "ХИТ",
+            gramm:400
 
         },
         {
             id: 10,
             img: pizza1,
+            img: pizza1,
             name: "Чикен Сладкий Чили",
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
-            new: "NEW"
+            xit: "ХИТ",
+            gramm:400
 
         },
         {
             id: 11,
             img: pizza1,
-            name: "Чикен Сладкий Чили",
-            info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: 399,
-            new: "NEW"
-
-        },
-        {
-            id: 12,
             img: pizza1,
             name: "Чикен Сладкий Чили",
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
+            xit: "ХИТ",
+            gramm:400
+        },
+        {
+            id: 12,
+            img: pizza1,
+            img: pizza1,
+            name: "Чикен Сладкий Чили",
+            info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+            price: 399,
+            xit: "ХИТ",
+            gramm:400
         },
         {
             id: 13,
@@ -113,6 +130,8 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             name: "Чикен Сладкий Чили",
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
+            xit: "ХИТ",
+            gramm:400
         },
 
     ])
@@ -153,7 +172,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
         setcmWithe1('cmBlack')
         setcmWithe2('cmWithe')  
         setcmWithe3('cmBlack')
-        setPizzaCmm('350px')
+        setPizzaCmm('400px')
         setCm('28 cm')
     }
 
@@ -170,7 +189,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
     const [div, setDiv] = useState('allBox')
 
 
-    function kz(id, img, name, info, price) {
+    function kz(id, img, name, info, price ,gramm) {
         setDiv('add')
         if (colorWithe1 == 'colorWith') {
             addProduct(id, img, name, a2, sm,  price, )
@@ -178,10 +197,6 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
         if (colorWithe2 == 'colorWith') {
             addProduct(id, img, name, a1, sm , price ,)
         }
-
-
-
-
         setSon2(son2 + 1)
         // if (cmWithe3 == 'cmWithe') {
         //     addProduct(id, img, name, a2,t1, price)
@@ -193,7 +208,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
         //     addProduct(id, img, name, a1, t3, price)
         // }
 
-        PizzaOonclick(id, img, name)
+        PizzaOonclick(id, img, name , price ,gramm)
 
     }
 
@@ -217,12 +232,14 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
 
     const [PizzaOnclick, setPizzaOnclick] = useState([])
 
-    function PizzaOonclick(id, img, name) {
+    function PizzaOonclick(id, img, name , price ,gramm) {
         setPizzaOnclick([
             {
                 id: id,
                 img: img,
-                name: name
+                name: name,
+                price: price,
+                gramm: gramm
             }
         ])
     }
@@ -340,8 +357,12 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
                                         </div>
                                     </div>
                                     <div className="priceAdnAdd">
-                                        <p>Итого: 379 ₽</p>
-                                        <span onClick={() => productADD()}>Add</span>
+                                        <div className="priceGramm">
+                                           <p>Итого: {item.price} ₽</p> 
+                                           <span className='gramm'>{item.gramm} г</span>
+                                        </div>
+                                        
+                                        <span className='addProductbtn' onClick={() => productADD()}>Add</span>
                                     </div>
                                 </div>
                             </div>

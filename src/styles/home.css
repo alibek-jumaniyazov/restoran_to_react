@@ -64,7 +64,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 0px;
-    width: 76%;
+    /* width: 76%; */
 }
 
 .Sale img {
