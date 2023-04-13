@@ -77,20 +77,24 @@ export default function Home() {
   localStorage.setItem('add', JSON.stringify(karzinka))
 
 
-  function addProduct(id, img, name, info, price, xit) {
+  function addProduct(id, img, name,info,sm,price,xit){
     setKarzinka(value => [...value, {
-      id: id,
-      img: img,
-      name: name,
-      info: info,
-      price: price,
-      xit: xit,
-    }])
-  }
+        id: id,
+        img: img,
+        name: name,
+        info: info,
+        sm: sm,
+        price: price,
+        xit: xit,
+      }])
+}
+
+const [son2,setSon2] = useState(JSON.parse(localStorage.getItem('son')) ||0)
+localStorage.setItem('son', JSON.stringify(son2))
 
   return (
     <div className="Home">
-      <HomeHeader karzinka={karzinka} />
+      <HomeHeader setSon2={setSon2} son2={son2}  karzinka={karzinka} />
       <div className="boxes">
         {
           box.map((item) => (
@@ -106,7 +110,7 @@ export default function Home() {
         }
       </div>
       <Location />
-      <AllPizza sliceData={8} addProduct={addProduct} />
+      <AllPizza setSon2={setSon2} son2={son2} sliceData={8} addProduct={addProduct} />
     </div>
   )
 }

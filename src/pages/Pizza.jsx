@@ -8,21 +8,23 @@ export default function Pizza(){
 
     localStorage.setItem('add', JSON.stringify(karzinka))
 
-    function addProduct(id, img, name,info,price,xit){
+    function addProduct(id, img, name,info,sm,price,xit){
         setKarzinka(value => [...value, {
             id: id,
             img: img,
             name: name,
             info: info,
+            sm: sm,
             price: price,
             xit: xit,
           }])
     }
-
+    const [son2,setSon2] = useState(JSON.parse(localStorage.getItem('son')) ||0)
+    localStorage.setItem('son', JSON.stringify(son2))
     return(
         <div className="Pizza">
-            <Header karzinka={karzinka}/>
-            <AllPizza addProduct={addProduct}/>
+            <Header son2={son2} karzinka={karzinka}/>
+            <AllPizza setSon2={setSon2} son2={son2} addProduct={addProduct}/>
         </div>
         
     )

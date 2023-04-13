@@ -226,6 +226,7 @@
 }
 
 .div1Box {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -236,10 +237,9 @@
     border: 1px solid #F0F0F0;
 }
 
-.div1Box p {
-    border: 1px solid #F0F0F0;
+.div1BoxTitle {
     border-radius: 6px;
-    font-weight: 500;
+    font-weight: 400 !important;
     font-size: 16px;
     line-height: 22px;
     display: flex;
@@ -249,6 +249,22 @@
     height: 48px;
     width: 240px;
     cursor: pointer;
+    z-index: 1;
+}
+
+.div1BoxTitle2 {
+    border-radius: 6px;
+    font-weight: 400 !important;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #191919;
+    height: 48px;
+    width: 240px;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .pizzaSize {
@@ -260,19 +276,51 @@
     align-items: center;
     justify-content: center;
     border: 1px solid #F0F0F0;
+    position: relative;
 }
 
-.pizzaSize p {
+
+
+.cmWithe {
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #191919;
+    color: #ffffff !important;
     height: 44px;
     width: 159.08572387695312px;
     border-radius: 6px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.cmBlack {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #191919 !important;
+    height: 44px;
+    width: 159.08572387695312px;
+    border-radius: 6px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.bgS {
+    position: absolute;
+    background: #FF7010;
+    border-radius: 6px;
+    height: 44px;
+    width: 159.08572387695312px;
+    border-radius: 6px;
+    transition: all 0.4s ease;
+    z-index: 0;
+    cursor: pointer;
 }
 
 .priceBox {
@@ -316,15 +364,24 @@
     cursor: pointer;
     transition: all 0.4s ease;
 }
-.priceAdnAdd span:active{
+
+.priceAdnAdd span:active {
     scale: 80%;
     transition: all 0.4s ease;
 }
 
-.pizzaBig{
+.pizzaBig {
+    height: 450px;
+}
+
+.kardImgSize {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 450px;
     height: 450px;
 }
+
 .aa {
     display: flex;
     justify-content: center;
@@ -342,4 +399,70 @@
 .aa img:active {
     transition: all 0.4s ease;
     scale: 80%;
+}
+
+.colorWith {
+    color: #FFFFFF !important;
+    border-radius: 6px;
+    font-weight: 400 !important;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #191919;
+    height: 48px;
+    width: 240px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.bgC {
+    position: absolute;
+
+    background: #FF7010;
+    font-weight: 400 !important;
+    font-size: 16px;
+    line-height: 22px;
+    height: 48px;
+    width: 240px;
+    border-radius: 6px;
+    z-index: 0;
+    transition: all 0.4s ease;
+}
+
+.karzinkaFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.karzinkaFooter h1 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FF7010;
+}
+
+.karzinkaFooter span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 24px;
+    gap: 10px;
+    width: 178px;
+    height: 48px;
+    background: #FF7010;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.karzinkaFooter span:active{
+    scale: 80%;
+    transition: all 0.4s ease;
 }

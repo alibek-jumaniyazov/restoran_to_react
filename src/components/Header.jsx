@@ -3,9 +3,12 @@ import kazina from '../images/Shopping bag.svg'
 import down from '../images/Arrow down.svg'
 import { Link } from 'react-router-dom'
 import x from '../images/Union.svg'
+import KarzinkaPizza from './KarzinkaPizza'
 import { useState } from 'react'
 
-export default function Header({ karzinka }) {
+export default function Header({ karzinka , son2 }) {
+
+    const [total , setTotal] = useState(0)
 
     const [karzinkaDiv, setKarzinkADiv] = useState('allBox')
 
@@ -18,17 +21,6 @@ export default function Header({ karzinka }) {
         setKarzinkADiv('allBox')
     }
 
-
-    const [son, setSon] = useState(1)
-
-
-    function Minus() {
-        setSon(son - 1)
-    }
-
-    function Pilus() {
-        setSon(son + 1)
-    }
 
 
     return (
@@ -52,7 +44,7 @@ export default function Header({ karzinka }) {
                 </ul>
                 <div onClick={() => addKarzinka()} className="shopCard">
                     <img src={kazina} alt="" />
-                    <p>0</p>
+                    <p>{son2}</p>
                     <span>₽</span>
                 </div>
             </header>
@@ -65,24 +57,14 @@ export default function Header({ karzinka }) {
                     <div className="products">
                         {
                             karzinka.map((add) => (
-                                <div className="product">
-                                    <img src={add.img} alt="" />
-                                    <div className="productInfos">
-                                        <div className="karzinkaInfo">
-                                            <p>{add.name}</p>
-                                            <span>{add.info}</span>
-                                        </div>
-                                        <div className="ProductPrice">
-                                            <div className='productCounter'>
-                                                <span onClick={() => Minus()}>-</span>  <p>{son}</p> <span onClick={() => Pilus()} >+</span>
-                                            </div>
-                                            <span>{`${add.price * son} ₽`}</span>
-                                        </div>
-                                    </div>
-                                </div>
+                               <KarzinkaPizza total={total} setTotal={setTotal} add={add}/> 
                             ))
                         }
-
+                        
+                    </div>
+                    <div className="karzinkaFooter">
+                        <h1>Итого: {total} ₽</h1>
+                        <span>Оформить заказ</span>
                     </div>
                 </div>
             </div>
