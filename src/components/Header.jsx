@@ -40,15 +40,15 @@ export default function Header({ karzinka }) {
                     </div>
                 </Link>
                 <ul className="list">
-                    <li className="item">Акции</li>
-                    <li className="item">Пицца</li>
-                    <li className="item">Суши</li>
-                    <li className="item">Напитки</li>
-                    <li className="item">Закуски</li>
-                    <li className="item">Комбо</li>
-                    <li className="item">Десерты</li>
-                    <li className="item">Соусы</li>
-                    <li className="item">Другое <img src={down} alt="" /></li>
+                  <Link to={'/pizza'}> <li className="item">Акции</li> </Link>
+                  <Link to={'/pizza'}> <li className="item">Пицца</li> </Link>
+                  <Link to={'/pizza'}> <li className="item">Суши</li> </Link>
+                  <Link to={'/pizza'}> <li className="item">Напитки</li> </Link>
+                  <Link to={'/pizza'}> <li className="item">Закуски</li> </Link>
+                  <Link to={'/pizza'}> <li className="item">Комбо</li> </Link>
+                  <Link to={'/pizza'}> <li className="item">Десерты</li> </Link>
+                  <Link to={'/pizza'}> <li className="item">Соусы</li> </Link>
+                  <li className="item">Другое <img src={down} alt="" /></li> 
                 </ul>
                 <div onClick={() => addKarzinka()} className="shopCard">
                     <img src={kazina} alt="" />
