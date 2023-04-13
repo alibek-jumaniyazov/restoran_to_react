@@ -8,7 +8,9 @@ import { useState } from 'react'
 
 export default function Header({ karzinka , son2 }) {
 
-    const [total , setTotal] = useState(0)
+    const [total , setTotal] = useState( JSON.parse(localStorage.getItem('total')) || 0)
+
+    localStorage.setItem('total', JSON.stringify(total))
 
     const [karzinkaDiv, setKarzinkADiv] = useState('allBox')
 

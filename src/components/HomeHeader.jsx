@@ -9,7 +9,9 @@ import { useState } from 'react'
 import KarzinkaPizza from './KarzinkaPizza'
 
 export default function HomeHeader({ karzinka,son2 }) {
-    const [total , setTotal] = useState(0)
+    const [total , setTotal] = useState( JSON.parse(localStorage.getItem('total')) || 0)
+
+    localStorage.setItem('total', JSON.stringify(total))
 
     const [karzinkaDiv, setKarzinkADiv] = useState('allBox')
 

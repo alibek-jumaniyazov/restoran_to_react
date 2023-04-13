@@ -3,9 +3,10 @@ import { useState } from 'react'
 
 export default function KarzinkaPizza({ add ,setTotal , total  ,}) {
 
-    const [son, setSon] = useState( JSON.parse(localStorage.getItem('sonn')) || 1)
+    const [son , setSon] = useState( JSON.parse(localStorage.getItem('sonn')) || 1)
 
     localStorage.setItem('sonn', JSON.stringify(son))
+
 
     let totall = 0
 
