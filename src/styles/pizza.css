@@ -313,7 +313,12 @@
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
-
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.priceAdnAdd span:active{
+    scale: 80%;
+    transition: all 0.4s ease;
 }
 
 .pizzaBig{
