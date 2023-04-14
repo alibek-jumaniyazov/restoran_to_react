@@ -3,9 +3,9 @@ import { useState } from 'react'
 
 export default function KarzinkaPizza({ add ,setTotal , total  ,}) {
 
-    const [son , setSon] = useState( JSON.parse(localStorage.getItem('sonn')) || 1)
-
-    localStorage.setItem('sonn', JSON.stringify(son))
+    const [son , setSon] = useState( 1)
+// JSON.parse(localStorage.getItem('sonn')) || 
+    // localStorage.setItem('sonn', JSON.stringify(son))
 
 
     let totall = 0
@@ -30,7 +30,7 @@ export default function KarzinkaPizza({ add ,setTotal , total  ,}) {
             <div className="productInfos">
                 <div className="karzinkaInfo">
                     <p>{add.name}</p>
-                    <span>{add.info} ,{add.sm}</span>
+                    <span>{add.info} ,{add.sm} cm</span>
                 </div>
                 
                 <div className="ProductPrice">

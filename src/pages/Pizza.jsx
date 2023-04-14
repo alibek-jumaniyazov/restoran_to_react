@@ -4,9 +4,9 @@ import Header from "../components/Header";
 
 export default function Pizza(){
 
-    const [karzinka , setKarzinka] = useState(JSON.parse(localStorage.getItem('add')) || [])
-
-    localStorage.setItem('add', JSON.stringify(karzinka))
+    const [karzinka , setKarzinka] = useState( [])
+// JSON.parse(localStorage.getItem('add')) ||
+    // localStorage.setItem('add', JSON.stringify(karzinka))
 
     function addProduct(id, img, name,info,sm,price,xit){
         setKarzinka(value => [...value, {

@@ -5,8 +5,8 @@ import pizza2 from '../images/Rectangle 4 (1).svg'
 import OnePizza from './OnePizza'
 import x from '../images/Cross.svg'
 import sir from '../images/Group 83.svg'
-export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
-    console.log(sliceData);
+export default function AllPizza({ sliceData, addProduct, son2, setSon2 }) {
+
 
     const [pizza, setPizza] = useState([
         {
@@ -16,7 +16,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
             xit: "ХИТ",
-            gramm:400
+            gramm: 400
         },
         {
             id: 2,
@@ -25,7 +25,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             info: "Курица, Лук, Перец Халапеньо...",
             price: 549,
             xit: "ХИТ",
-            gramm:400
+            gramm: 400
 
         },
         {
@@ -35,7 +35,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             info: "Курица, Лук, Соус Карбонара,...",
             price: 249,
             new: "NEW",
-            gramm:400
+            gramm: 400
         },
         {
             id: 4,
@@ -44,7 +44,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             info: "Бекон, Ветчина, Грибы, Курица, Лук, Маслины, Огурцы мари...",
             price: 630,
             new: "NEW",
-            gramm:400
+            gramm: 400
 
         },
         {
@@ -54,7 +54,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
             xit: "ХИТ",
-            gramm:400
+            gramm: 400
         },
         {
             id: 6,
@@ -63,7 +63,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
             xit: "ХИТ",
-            gramm:400
+            gramm: 400
         },
         {
             id: 7,
@@ -72,7 +72,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
             xit: "ХИТ",
-            gramm:400
+            gramm: 400
         },
         {
             id: 8,
@@ -81,7 +81,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
             xit: "ХИТ",
-            gramm:400
+            gramm: 400
         },
         {
             id: 9,
@@ -90,7 +90,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
             xit: "ХИТ",
-            gramm:400
+            gramm: 400
 
         },
         {
@@ -101,7 +101,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
             xit: "ХИТ",
-            gramm:400
+            gramm: 400
 
         },
         {
@@ -112,7 +112,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
             xit: "ХИТ",
-            gramm:400
+            gramm: 400
         },
         {
             id: 12,
@@ -122,7 +122,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
             xit: "ХИТ",
-            gramm:400
+            gramm: 400
         },
         {
             id: 13,
@@ -131,10 +131,11 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
             info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
             price: 399,
             xit: "ХИТ",
-            gramm:400
+            gramm: 400
         },
 
     ])
+    const [div, setDiv] = useState('allBox')
     const [colorWithe1, setColor1] = useState('colorWith')
     const [colorWithe2, setColor2] = useState('div1BoxTitle')
     const [pizzaHamir, setPizzaHamir] = useState('0px')
@@ -142,11 +143,16 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
     const [cmWithe1, setcmWithe1] = useState('cmWithe')
     const [cmWithe2, setcmWithe2] = useState('cmBlack')
     const [cmWithe3, setcmWithe3] = useState('cmBlack')
+    const [tonke, setTonke] = useState('Традиционное')
+    const [sm, setCm] = useState(20)
 
     function bgColor1() {
         setPizzaHamir('0px')
         setColor1('colorWith')
         setColor2('div1BoxTitle')
+
+        setTonke('Традиционное')
+
     }
 
 
@@ -154,8 +160,9 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
         setPizzaHamir('240px')
         setColor2('colorWith')
         setColor1('div1BoxTitle')
-    }
+        setTonke('Тонкое')
 
+    }
 
     function S1() {
         setPizzaCm('0px')
@@ -163,16 +170,16 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
         setcmWithe2('cmBlack')
         setcmWithe3('cmBlack')
         setPizzaCmm('300px')
-        setCm('20 cm')
+        setCm(20)
     }
 
     function S2() {
         setPizzaCm('160px')
         setcmWithe1('cmBlack')
-        setcmWithe2('cmWithe')  
+        setcmWithe2('cmWithe')
         setcmWithe3('cmBlack')
         setPizzaCmm('400px')
-        setCm('28 cm')
+        setCm(28)
     }
 
     function S3() {
@@ -181,21 +188,16 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
         setcmWithe2('cmBlack')
         setcmWithe3('cmWithe')
         setPizzaCmm('450px')
-        setCm('33 cm')
+        setCm(33)
     }
-    const [sm , setCm] = useState('')
-
-    const [div, setDiv] = useState('allBox')
 
 
-    function kz(id, img, name, info, price ,gramm) {
+    function kz(id, img, name, info, price, gramm) {
         setDiv('add')
-        if (colorWithe1 == 'colorWith') {
-            addProduct(id, img, name, a2, sm,  price, )
-        }
-        if (colorWithe2 == 'colorWith') {
-            addProduct(id, img, name, a1, sm , price ,)
-        }
+        // if (sm == 0) {
+        addProduct(id, img, name, tonke, sm, price,)
+        // }
+
         setSon2(son2 + 1)
         // if (cmWithe3 == 'cmWithe') {
         //     addProduct(id, img, name, a2,t1, price)
@@ -207,16 +209,10 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
         //     addProduct(id, img, name, a1, t3, price)
         // }
 
-        PizzaOonclick(id, img, name , price ,gramm)
+        PizzaOonclick(id, img, name, price, gramm)
 
     }
 
-    const a1 = 'Традиционное'
-    const a2 = 'Тонкое'
-
-    const t1 = '20 см'
-    const t2 = '28 см'
-    const t3 = '33 см'
 
 
 
@@ -231,7 +227,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
 
     const [PizzaOnclick, setPizzaOnclick] = useState([])
 
-    function PizzaOonclick(id, img, name , price ,gramm) {
+    function PizzaOonclick(id, img, name, price, gramm) {
         setPizzaOnclick([
             {
                 id: id,
@@ -243,8 +239,8 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
         ])
     }
 
-   
-    const [pizzaCmm , setPizzaCmm] = useState('300px')
+
+    const [pizzaCmm, setPizzaCmm] = useState('300px')
 
 
     return (
@@ -275,9 +271,9 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
                         PizzaOnclick.map((item) => (
                             <div className="productAddToCard">
                                 <div className="kardImgSize">
-                                    <img style={{width:`${pizzaCmm}`}} className='pizzaBig' src={item.img} alt="" />
+                                    <img style={{ width: `${pizzaCmm}` }} className='pizzaBig' src={item.img} alt="" />
                                 </div>
-                                
+
                                 <div className="addCardInfo">
                                     <p>Пепперони по-деревенски</p>
                                     <div className="savzavot">
@@ -311,16 +307,16 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
                                         </div>
                                     </div>
                                     <div className="div1Box">
-                                        <p onClick={() => bgColor1()} className={`${colorWithe1}`}>{a1}</p>
-                                        <p onClick={() => bgColor2()} className={`${colorWithe2}`}>{a2}</p>
+                                        <p onClick={() => bgColor1()} className={`${colorWithe1}`}>Традиционное</p>
+                                        <p onClick={() => bgColor2()} className={`${colorWithe2}`}>Тонкое</p>
                                         <div className="bgC" style={{ left: `${pizzaHamir}` }}>
 
                                         </div>
                                     </div>
                                     <div className="pizzaSize">
-                                        <p className={`${cmWithe1}`} onClick={() => S1()}>{t1}</p>
-                                        <p className={`${cmWithe2}`} onClick={() => S2()}>{t2}</p>
-                                        <p className={`${cmWithe3}`} onClick={() => S3()}>{t3}</p>
+                                        <p className={`${cmWithe1}`} onClick={() => S1()}>20 см</p>
+                                        <p className={`${cmWithe2}`} onClick={() => S2()}>28 см</p>
+                                        <p className={`${cmWithe3}`} onClick={() => S3()}>33 см</p>
                                         <div className="bgS" style={{ left: `${pizzaCm}` }}>
 
                                         </div>
@@ -357,10 +353,10 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
                                     </div>
                                     <div className="priceAdnAdd">
                                         <div className="priceGramm">
-                                           <p>Итого: {item.price} ₽</p> 
-                                           <span className='gramm'>{item.gramm} г</span>
+                                            <p>Итого: {item.price} ₽</p>
+                                            <span className='gramm'>{item.gramm} г</span>
                                         </div>
-                                        
+
                                         <span className='addProductbtn' onClick={() => productADD()}>Add</span>
                                     </div>
                                 </div>
