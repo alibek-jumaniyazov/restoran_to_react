@@ -23,7 +23,7 @@ export default function KarzinkaPizza({ add ,setTotal , total  ,}) {
 
     
 
-   setTotal(totall += add.price * son); 
+   setTotal(totall += add.price * son);  
 
     
     return (

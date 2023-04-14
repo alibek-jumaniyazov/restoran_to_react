@@ -4,7 +4,7 @@ import down from '../images/Arrow down.svg'
 import { Link } from 'react-router-dom'
 import x from '../images/Union.svg'
 import KarzinkaPizza from './KarzinkaPizza'
-import { useState } from 'react'
+import { useState, memo } from 'react'
 
 export default function Header({ karzinka , son2 }) {
 
@@ -16,14 +16,13 @@ export default function Header({ karzinka , son2 }) {
 
     function addKarzinka() {
         setKarzinkADiv('add')
-        // body.classList.add('overfolw')
     }
 
     function Close() {
         setKarzinkADiv('allBox')
     }
 
-
+console.log(karzinka);
 
     return (
         <div className="HomeHeader">
@@ -46,19 +45,20 @@ export default function Header({ karzinka , son2 }) {
                 </ul>
                 <div onClick={() => addKarzinka()} className="shopCard">
                     <img src={kazina} alt="" />
-                    <p>{son2}</p>
+                    <p>{total}</p>
                     <span>₽</span>
                 </div>
             </header>
-            <div className={karzinkaDiv}>
+            <div className={karzinkaDiv}>   
                 <div className="karzinka">
                     <div className="karzinkaHeader">
                         <h1>Ваш заказ</h1>
                         <img onClick={() => Close()} src={x} alt="" />
                     </div>
                     <div className="products">
+
                         {
-                            karzinka.map((add) => (
+                            karzinka?.map((add) => ( 
                                <KarzinkaPizza total={total} setTotal={setTotal} add={add}/> 
                             ))
                         }
@@ -66,7 +66,9 @@ export default function Header({ karzinka , son2 }) {
                     </div>
                     <div className="karzinkaFooter">
                         <h1>Итого: {total} ₽</h1>
-                        <span>Оформить заказ</span>
+                        {karzinka?.length !==0 && 
+                        <Link to={'/zakaz'}><span>Оформить заказ</span></Link>
+                        }
                     </div>
                 </div>
             </div>

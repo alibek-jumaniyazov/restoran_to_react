@@ -1,4 +1,4 @@
-export default function OnePizza({ item , kz }) {
+export default function OnePizza({ item, kz ,addOn, openBox }) {
     return (
         <div className="OnePizza">
             {
@@ -12,10 +12,13 @@ export default function OnePizza({ item , kz }) {
                 <p>{item.name}</p>
                 <span>{item.info}</span>
                 <div className="addBtn">
-                    <a onClick={() =>kz(item.id , item.img , item.name , item.info , item.price , item.gramm)} className="btnPizza">Выбрать</a>
-                    <h3>от {item.price} ₽</h3>
-                </div>
+                    <a onClick={() => openBox(item.id, item.img, item.name, item.info, item.price, item.gramm)} className="btnPizza">Выбрать</a>
+                <h3>от {item.price} ₽</h3>
             </div>
         </div>
+        </div >
     )
 }
+                       
+                    //     () =>addOn == true ?  kz( item.id, item.img, item.name, item.info, item.price, item.gramm)
+                    //    :setDiv('add') 

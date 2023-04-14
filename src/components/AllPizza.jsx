@@ -135,6 +135,7 @@ export default function AllPizza({ sliceData, addProduct, son2, setSon2 }) {
         },
 
     ])
+    const [pizzaCmm, setPizzaCmm] = useState('300px')
     const [div, setDiv] = useState('allBox')
     const [colorWithe1, setColor1] = useState('colorWith')
     const [colorWithe2, setColor2] = useState('div1BoxTitle')
@@ -145,6 +146,7 @@ export default function AllPizza({ sliceData, addProduct, son2, setSon2 }) {
     const [cmWithe3, setcmWithe3] = useState('cmBlack')
     const [tonke, setTonke] = useState('Традиционное')
     const [sm, setCm] = useState(20)
+
 
     function bgColor1() {
         setPizzaHamir('0px')
@@ -190,28 +192,6 @@ export default function AllPizza({ sliceData, addProduct, son2, setSon2 }) {
     }
 
 
-    function kz(id, img, name, info, price, gramm) {
-        setDiv('add')
-        // if (sm == 0) {
-        addProduct(id, img, name, tonke, sm, price,)
-        // }
-
-        setSon2(son2 + 1)
-        // if (cmWithe3 == 'cmWithe') {
-        //     addProduct(id, img, name, a2,t1, price)
-        // }
-        // if (cmWithe3 == 'cmWithe') {    
-        //     addProduct(id, img, name, a1,t2, price)
-        // }
-        // if (cmWithe3 == 'cmWithe') {
-        //     addProduct(id, img, name, a1, t3, price)
-        // }
-
-        PizzaOonclick(id, img, name, price, gramm)
-
-    }
-
-
 
 
     function Closed1() {
@@ -219,9 +199,9 @@ export default function AllPizza({ sliceData, addProduct, son2, setSon2 }) {
     }
 
 
-    function productADD() {
-        setDiv('allBox')
-    }
+
+
+
 
     const [PizzaOnclick, setPizzaOnclick] = useState([])
 
@@ -237,8 +217,27 @@ export default function AllPizza({ sliceData, addProduct, son2, setSon2 }) {
         ])
     }
 
+    function openBox(id, img, name, info, price, gramm){
+        setDiv('add')
+        PizzaOonclick(id, img, name, price, gramm)
+        
+    }
 
-    const [pizzaCmm, setPizzaCmm] = useState('300px')
+    let addOn = false
+    function productADD(id,name, img, price,) {
+        addOn = true
+        setDiv('allBox')
+        {
+            addOn == true ? 
+            addProduct(id, img, name, tonke , sm, price,)
+            :
+            addProduct()
+        }
+    }
+
+
+
+
 
 
     return (
@@ -252,14 +251,14 @@ export default function AllPizza({ sliceData, addProduct, son2, setSon2 }) {
             </div>
             <div className="Pizzas">
 
-                {
+                {        
                     sliceData ?
                         pizza.slice(0, sliceData).map((item, index) => (
-                            <OnePizza kz={kz} item={item} />
+                            <OnePizza setDiv={setDiv} addOn={addOn} openBox={openBox} item={item} />
                         ))
                         :
                         pizza.map((item, index) => (
-                            <OnePizza kz={kz} item={item} />
+                            <OnePizza setDiv={setDiv} addOn={addOn} openBox={openBox} item={item} />
                         ))
                 }
             </div>
@@ -355,7 +354,7 @@ export default function AllPizza({ sliceData, addProduct, son2, setSon2 }) {
                                             <span className='gramm'>{item.gramm} г</span>
                                         </div>
 
-                                        <span className='addProductbtn' onClick={() => productADD()}>Add</span>
+                                        <span className='addProductbtn' onClick={() => productADD(item.id, item.name, item.img , item.price)}>Add</span>
                                     </div>
                                 </div>
                             </div>

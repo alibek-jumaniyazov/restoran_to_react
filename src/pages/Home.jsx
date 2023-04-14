@@ -72,9 +72,9 @@ export default function Home() {
     },
   ])
 
-  const [karzinka, setKarzinka] = useState(JSON.parse(localStorage.getItem('add')) || [])
-
-  localStorage.setItem('add', JSON.stringify(karzinka))
+  const [karzinka, setKarzinka] = useState([])
+// JSON.parse(localStorage.getItem('add')) ||
+  // localStorage.setItem('add', JSON.stringify(karzinka))
 
 
   function addProduct(id, img, name,info,sm,price,xit){
@@ -89,8 +89,9 @@ export default function Home() {
       }])
 }
 
-const [son2,setSon2] = useState(JSON.parse(localStorage.getItem('son')) ||0)
-localStorage.setItem('son', JSON.stringify(son2))
+const [son2,setSon2] = useState(0)
+// JSON.parse(localStorage.getItem('son')) ||
+// localStorage.setItem('son', JSON.stringify(son2))
 
   return (
     <div className="Home">

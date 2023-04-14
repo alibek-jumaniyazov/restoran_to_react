@@ -8,8 +8,10 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import KarzinkaPizza from './KarzinkaPizza'
 
-export default function HomeHeader({ karzinka,son2 }) {
-    const [total , setTotal] = useState(  0)
+export default function HomeHeader({ karzinka }) {
+    const [total , setTotal] = useState(0)
+
+
 // JSON.parse(localStorage.getItem('total')) ||
     // localStorage.setItem('total', JSON.stringify(total))
 
@@ -17,7 +19,6 @@ export default function HomeHeader({ karzinka,son2 }) {
 
     function addKarzinka() {
         setKarzinkADiv('add')
-        // body.classList.add('overfolw')
     }
 
     function Close() {
@@ -59,7 +60,7 @@ export default function HomeHeader({ karzinka,son2 }) {
                 </Link>
                 <div onClick={() => addKarzinka()} className="shopCard">
                     <img src={kazina} alt="" />
-                    <p>{son2}</p>
+                    <p>{total}</p>
                     <span>₽</span>
                 </div>
             </header>
@@ -79,11 +80,12 @@ export default function HomeHeader({ karzinka,son2 }) {
                     </div>
                     <div className="karzinkaFooter">
                         <h1>Итого: {total} ₽</h1>
-                        <span>Оформить заказ</span>
+                        {karzinka?.length !==0 && 
+                        <Link to={'/zakaz'}><span>Оформить заказ</span></Link>
+                        }
                     </div>
                 </div>
-            </div>
+            </div>      
         </div>
     )
 }
-
