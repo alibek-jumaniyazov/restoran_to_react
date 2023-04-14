@@ -12,6 +12,9 @@ export default function KarzinkaPizza({ add ,setTotal , total  ,}) {
 
     function Minus() {
         setSon(son - 1)
+        if (son == 0) {
+            setSon(son + 0)
+          }
     }
 
     function Pilus() {
