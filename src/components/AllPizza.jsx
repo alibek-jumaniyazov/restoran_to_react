@@ -150,9 +150,7 @@ export default function AllPizza({ sliceData, addProduct, son2, setSon2 }) {
         setPizzaHamir('0px')
         setColor1('colorWith')
         setColor2('div1BoxTitle')
-
         setTonke('Традиционное')
-
     }
 
 
