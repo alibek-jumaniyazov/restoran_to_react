@@ -142,7 +142,6 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
     const [cmWithe1, setcmWithe1] = useState('cmWithe')
     const [cmWithe2, setcmWithe2] = useState('cmBlack')
     const [cmWithe3, setcmWithe3] = useState('cmBlack')
-    const [sm , setCm] = useState('20 cm')
 
     function bgColor1() {
         setPizzaHamir('0px')
@@ -184,7 +183,7 @@ export default function AllPizza({ sliceData, addProduct , son2 , setSon2 }) {
         setPizzaCmm('450px')
         setCm('33 cm')
     }
-
+    const [sm , setCm] = useState('')
 
     const [div, setDiv] = useState('allBox')
 
