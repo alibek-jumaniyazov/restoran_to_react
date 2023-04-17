@@ -30,7 +30,7 @@ localStorage.setItem('zakaz', JSON.stringify(zakaz))
       </Routes>
       <div className="container">
         <Routes>
-          <Route  path="/pizza" element={<Pizza   addZakazProduct={addZakazProduct}/>} />
+          <Route  path="/pizza" element={<Pizza addZakazProduct={addZakazProduct}/>} />
           <Route  path="/zakaz" element={<Zakaz zakaz={zakaz} />} />
         </Routes>
       </div>
