@@ -2,11 +2,11 @@ import { useState } from "react";
 import AllPizza from "../components/AllPizza";
 import Header from "../components/Header";
 
-export default function Pizza(){
+export default function Pizza({addZakazProduct}){
 
-    const [karzinka , setKarzinka] = useState( [])
-// JSON.parse(localStorage.getItem('add')) ||
-    // localStorage.setItem('add', JSON.stringify(karzinka))
+    const [karzinka , setKarzinka] = useState(JSON.parse(localStorage.getItem('add')) || [])
+
+    localStorage.setItem('add', JSON.stringify(karzinka))
 
     function addProduct(id, img, name,info,sm,price,){
         setKarzinka(value => [...value, {
@@ -16,9 +16,34 @@ export default function Pizza(){
             info: info,
             sm: sm,
             price: price,
-
           }])
+          addZakazProduct(id, img, name,info,sm,price)
     }
+
+
+    // const addProd = (karzinka) => {
+    //     setKarzinka(prev => {
+    //         const exist = prev.find(({id}) => id === karzinka.id)
+    
+    //         if(exist){
+    //             return prev.map((p) => {
+    //                 if(p.id === karzinka.id){
+    //                     return {
+    //                         ...p,
+    //                         count: p.count + 1
+    //                     }
+    //                 }
+    //             })
+    //         } 
+    //         else {
+    //             return [...prev, {
+    //                 ...karzinka,
+    //                 count: 1
+    //             }]
+    //         }
+    //     })
+    // }
+
     const [son2,setSon2] = useState(0)
     // JSON.parse(localStorage.getItem('son')) ||
     // localStorage.setItem('son', JSON.stringify(son2))
@@ -30,3 +55,5 @@ export default function Pizza(){
         
     )
 }
+
+// addProd={addProd}

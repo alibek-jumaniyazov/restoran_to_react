@@ -5,7 +5,7 @@ import pizza2 from '../images/Rectangle 4 (1).svg'
 import OnePizza from './OnePizza'
 import x from '../images/Cross.svg'
 import sir from '../images/Group 83.svg'
-export default function AllPizza({ sliceData, addProduct, son2, setSon2 }) {
+export default function AllPizza({ sliceData, addProduct,  }) {
 
 
     const [pizza, setPizza] = useState([
@@ -215,6 +215,7 @@ export default function AllPizza({ sliceData, addProduct, son2, setSon2 }) {
                 gramm: gramm
             }
         ])
+        
     }
 
     function openBox(id, img, name, info, price, gramm){
@@ -225,14 +226,18 @@ export default function AllPizza({ sliceData, addProduct, son2, setSon2 }) {
 
     let addOn = false
     function productADD(id,name, img, price,) {
+
         addOn = true
         setDiv('allBox')
         {
             addOn == true ? 
             addProduct(id, img, name, tonke , sm, price,)
+            
             :
             addProduct()
         }
+   
+
     }
 
 

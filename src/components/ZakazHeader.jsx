@@ -4,9 +4,14 @@ import user from '../images/Account.svg'
 import down from '../images/Arrow down.svg'
 
 export default function ZakazHeader() {
+    
+
+
+    
+
     return (
-        <div className="HomeHeader">
-            <nav>
+        <div className="ZakazHeader">
+            <nav className="navZakaz">
                 <div className="place">
                     <div className="locatio">
                         <img src={location} alt="" />

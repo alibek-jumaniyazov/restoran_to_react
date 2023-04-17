@@ -1,13 +1,25 @@
-import Header from "../components/Header";
-import ZakazHeader from "../components/ZakazHeader";
-import user from '../images/Account.svg'
-import down from '../images/Arrow down.svg'
-import location from '../images/Location.svg'
 
-export default function Zakaz() {
+import { useState } from "react";
+import ZakazHeader from "../components/ZakazHeader";
+import ZakazPizza from "../components/ZakazPizza";
+
+export default function Zakaz({zakaz}) {
+
+
+
     return (
         <div className="Zakaz">
             <ZakazHeader/>
+            <div className="zakazContainer">
+                <h1>Ваш заказ</h1>
+                <div className="zakazProduct">
+                    {
+                        zakaz.map((add) => (
+                            <ZakazPizza add={add}/>
+                        ))
+                    }
+                </div>
+            </div>
         </div>
     )
 }

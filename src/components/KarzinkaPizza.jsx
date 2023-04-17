@@ -1,12 +1,11 @@
 
 import { useState } from 'react'
 
-export default function KarzinkaPizza({ add ,setTotal , total  ,}) {
+export default function KarzinkaPizza({ add ,setTotal   ,}) {
 
-    const [son , setSon] = useState( 1)
-// JSON.parse(localStorage.getItem('sonn')) || 
-    // localStorage.setItem('sonn', JSON.stringify(son))
+    const [son , setSon] = useState(JSON.parse(localStorage.getItem('sonn')) || 1)
 
+    localStorage.setItem('sonn', JSON.stringify(son))
 
     let totall = 0
 

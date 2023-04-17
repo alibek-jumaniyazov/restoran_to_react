@@ -16,7 +16,7 @@ import Location from "../components/Location";
 import AllPizza from "../components/AllPizza";
 
 
-export default function Home() {
+export default function Home({addZakazProduct}) {
   const [box, setBox] = useState([
     {
       img: aksiya,
@@ -72,9 +72,9 @@ export default function Home() {
     },
   ])
 
-  const [karzinka, setKarzinka] = useState([])
-// JSON.parse(localStorage.getItem('add')) ||
-  // localStorage.setItem('add', JSON.stringify(karzinka))
+  const [karzinka, setKarzinka] = useState(JSON.parse(localStorage.getItem('add')) || [])
+
+  localStorage.setItem('add', JSON.stringify(karzinka))
 
 
   function addProduct(id, img, name,info,sm,price,xit){
@@ -87,6 +87,7 @@ export default function Home() {
         price: price,
         xit: xit,
       }])
+      addZakazProduct(id, img, name,info,sm,price)
 }
 
 const [son2,setSon2] = useState(0)
