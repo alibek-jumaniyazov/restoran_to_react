@@ -72,6 +72,11 @@
     gap: 0px
 }
 
+.OnePizza img {
+    height: 300px;
+    width: 300px;
+}
+
 .xit {
     position: absolute;
     top: 30px;
@@ -473,14 +478,15 @@
     transition: all 0.4s ease;
 }
 
-.gramm{
+.gramm {
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
 
     color: #A5A5A5;
 }
-.priceGramm{
+
+.priceGramm {
     display: flex;
     justify-content: center;
     align-items: flex-end;

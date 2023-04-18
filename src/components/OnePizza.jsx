@@ -1,18 +1,13 @@
 export default function OnePizza({ item, kz ,addOn, openBox }) {
     return (
         <div className="OnePizza">
-            {
-                item.new && <p className="xit">{item.new}</p>
-            }
-            {
-                item.xit && <p className="xit">{item.xit}</p>
-            }
-            <img src={item.img} alt="" />
+            <p className="xit">{item.xit}</p>
+            <img src={item.image} alt="" />
             <div className="pizzaInfo">
                 <p>{item.name}</p>
-                <span>{item.info}</span>
+                <span>{item.description}</span>
                 <div className="addBtn">
-                    <a onClick={() => openBox(item.id, item.img, item.name, item.info, item.price, item.gramm)} className="btnPizza">Выбрать</a>
+                    <a onClick={() => openBox(item.id, item.image, item.name, item.description, item.price, item.gramm)} className="btnPizza">Выбрать</a>
                 <h3>от {item.price} ₽</h3>
             </div>
         </div>
@@ -20,5 +15,5 @@ export default function OnePizza({ item, kz ,addOn, openBox }) {
     )
 }
                        
-                    //     () =>addOn == true ?  kz( item.id, item.img, item.name, item.info, item.price, item.gramm)
+                    //     () =>addOn == true ?  kz( item.id, item.image, item.name, item.info, item.price, item.gramm)
                     //    :setDiv('add') 

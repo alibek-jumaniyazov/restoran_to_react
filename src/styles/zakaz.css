@@ -1,11 +1,12 @@
-.ZakazHeader{
+.ZakazHeader {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-.navZakaz{
+
+.navZakaz {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,12 +14,104 @@
     height: 35px;
 
 }
-.zakazContainer{
+
+.zakazContainer {
     width: 1000px;
-    margin: 0 auto;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
+}
+
+.vashZakaz {
+    display: flex;
+    align-items: center;
+    color: #191919;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 850px;
+}
+
+.zakazProduct {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    height: 670px;
+    overflow-y: scroll;
+
+}
+
+.ZakazPizza {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    border-radius: 12px;
+    height: 152px;
+    width: 850px;
+    padding: 16px 20px;
+}
+
+.pizzaImgInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.pizzaImgInfo img {
+    height: 120px;
+    width: 120px;
+}
+
+.pizzaInfoo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.pizzaInfoo p {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #191919;
+    height: 28px;
+}
+
+.pizzaInfoo span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #191919;
+}
+
+.pizzaCountPrice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.zakazPrice {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #FF7010;
 }

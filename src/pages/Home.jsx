@@ -112,7 +112,7 @@ const [son2,setSon2] = useState(0)
         }
       </div>
       <Location />
-      <AllPizza setSon2={setSon2} son2={son2} sliceData={8} addProduct={addProduct} />
+      <AllPizza setSon2={setSon2} son2={son2}  addProduct={addProduct} />
     </div>
   )
 }

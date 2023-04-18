@@ -11,7 +11,7 @@ export default function Zakaz({zakaz}) {
         <div className="Zakaz">
             <ZakazHeader/>
             <div className="zakazContainer">
-                <h1>Ваш заказ</h1>
+                <h1 className="vashZakaz">Ваш заказ</h1>
                 <div className="zakazProduct">
                     {
                         zakaz.map((add) => (

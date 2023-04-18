@@ -21,7 +21,7 @@ export default function ZakazPizza({ add }) {
         <div className="ZakazPizza">
             <div className="pizzaImgInfo">
                 <img src={add.img} alt="" />
-                <div className="pizzaInfo">
+                <div className="pizzaInfoo">
                     <p>{add.name}</p>
                     <span>{add.info}, {add.sm}</span>
                 </div>
@@ -30,7 +30,7 @@ export default function ZakazPizza({ add }) {
                 <div className='productCounter'>
                     <span onClick={() => Minus()}>-</span>  <p>{son}</p> <span onClick={() => Pilus()} >+</span>
                 </div>
-                <span>{`${add.price * son} ₽`}</span>
+                <span className="zakazPrice">{`${add.price * son} ₽`}</span>
             </div>
         </div>
     )

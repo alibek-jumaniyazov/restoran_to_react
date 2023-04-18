@@ -1,140 +1,149 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import filterIcon from '../images/Group 93.svg'
 import pizza1 from '../images/Rectangle 4.svg'
 import pizza2 from '../images/Rectangle 4 (1).svg'
 import OnePizza from './OnePizza'
 import x from '../images/Cross.svg'
 import sir from '../images/Group 83.svg'
+import axios from 'axios'
 export default function AllPizza({ sliceData, addProduct,  }) {
 
+        const [pizza, setPizza] = useState([])
 
-    const [pizza, setPizza] = useState([
-        {
-            id: 1,
-            img: pizza1,
-            name: "Чикен Сладкий Чили",
-            info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: 399,
-            xit: "ХИТ",
-            gramm: 400
-        },
-        {
-            id: 2,
-            img: pizza2,
-            name: "EASY PEASY огуречный расколбас",
-            info: "Курица, Лук, Перец Халапеньо...",
-            price: 549,
-            xit: "ХИТ",
-            gramm: 400
+        // const apiPizza = 'https://api.pizza.data-soft.uz/'
 
-        },
-        {
-            id: 3,
-            img: pizza1,
-            name: "EASY PEASY чикен а-ля хрен",
-            info: "Курица, Лук, Соус Карбонара,...",
-            price: 249,
-            new: "NEW",
-            gramm: 400
-        },
-        {
-            id: 4,
-            img: pizza1,
-            name: "4 сезона",
-            info: "Бекон, Ветчина, Грибы, Курица, Лук, Маслины, Огурцы мари...",
-            price: 630,
-            new: "NEW",
-            gramm: 400
+        useEffect(() => {
+            axios.get('https://api.pizza.data-soft.uz/products/').then((product) => setPizza(product.data))
+        },[])
+        console.log(pizza);
 
-        },
-        {
-            id: 5,
-            img: pizza1,
-            name: "Чикен Сладкий Чили",
-            info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: 399,
-            xit: "ХИТ",
-            gramm: 400
-        },
-        {
-            id: 6,
-            img: pizza1,
-            name: "Чикен Сладкий Чили",
-            info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: 399,
-            xit: "ХИТ",
-            gramm: 400
-        },
-        {
-            id: 7,
-            img: pizza1,
-            name: "Чикен Сладкий Чили",
-            info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: 399,
-            xit: "ХИТ",
-            gramm: 400
-        },
-        {
-            id: 8,
-            img: pizza1,
-            name: "Чикен Сладкий Чили",
-            info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: 399,
-            xit: "ХИТ",
-            gramm: 400
-        },
-        {
-            id: 9,
-            img: pizza1,
-            name: "Чикен Сладкий Чили",
-            info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: 399,
-            xit: "ХИТ",
-            gramm: 400
+    // const [pizza, setPizza] = useState([
+    //     {
+    //         id: 1,
+    //         img: pizza1,
+    //         name: "Чикен Сладкий Чили",
+    //         info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+    //         price: 399,
+    //         xit: "ХИТ",
+    //         gramm: 400
+    //     },
+    //     {
+    //         id: 2,
+    //         img: pizza2,
+    //         name: "EASY PEASY огуречный расколбас",
+    //         info: "Курица, Лук, Перец Халапеньо...",
+    //         price: 549,
+    //         xit: "ХИТ",
+    //         gramm: 400
 
-        },
-        {
-            id: 10,
-            img: pizza1,
-            img: pizza1,
-            name: "Чикен Сладкий Чили",
-            info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: 399,
-            xit: "ХИТ",
-            gramm: 400
+    //     },
+    //     {
+    //         id: 3,
+    //         img: pizza1,
+    //         name: "EASY PEASY чикен а-ля хрен",
+    //         info: "Курица, Лук, Соус Карбонара,...",
+    //         price: 249,
+    //         new: "NEW",
+    //         gramm: 400
+    //     },
+    //     {
+    //         id: 4,
+    //         img: pizza1,
+    //         name: "4 сезона",
+    //         info: "Бекон, Ветчина, Грибы, Курица, Лук, Маслины, Огурцы мари...",
+    //         price: 630,
+    //         new: "NEW",
+    //         gramm: 400
 
-        },
-        {
-            id: 11,
-            img: pizza1,
-            img: pizza1,
-            name: "Чикен Сладкий Чили",
-            info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: 399,
-            xit: "ХИТ",
-            gramm: 400
-        },
-        {
-            id: 12,
-            img: pizza1,
-            img: pizza1,
-            name: "Чикен Сладкий Чили",
-            info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: 399,
-            xit: "ХИТ",
-            gramm: 400
-        },
-        {
-            id: 13,
-            img: pizza1,
-            name: "Чикен Сладкий Чили",
-            info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: 399,
-            xit: "ХИТ",
-            gramm: 400
-        },
+    //     },
+    //     {
+    //         id: 5,
+    //         img: pizza1,
+    //         name: "Чикен Сладкий Чили",
+    //         info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+    //         price: 399,
+    //         xit: "ХИТ",
+    //         gramm: 400
+    //     },
+    //     {
+    //         id: 6,
+    //         img: pizza1,
+    //         name: "Чикен Сладкий Чили",
+    //         info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+    //         price: 399,
+    //         xit: "ХИТ",
+    //         gramm: 400
+    //     },
+    //     {
+    //         id: 7,
+    //         img: pizza1,
+    //         name: "Чикен Сладкий Чили",
+    //         info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+    //         price: 399,
+    //         xit: "ХИТ",
+    //         gramm: 400
+    //     },
+    //     {
+    //         id: 8,
+    //         img: pizza1,
+    //         name: "Чикен Сладкий Чили",
+    //         info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+    //         price: 399,
+    //         xit: "ХИТ",
+    //         gramm: 400
+    //     },
+    //     {
+    //         id: 9,
+    //         img: pizza1,
+    //         name: "Чикен Сладкий Чили",
+    //         info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+    //         price: 399,
+    //         xit: "ХИТ",
+    //         gramm: 400
 
-    ])
+    //     },
+    //     {
+    //         id: 10,
+    //         img: pizza1,
+    //         img: pizza1,
+    //         name: "Чикен Сладкий Чили",
+    //         info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+    //         price: 399,
+    //         xit: "ХИТ",
+    //         gramm: 400
+
+    //     },
+    //     {
+    //         id: 11,
+    //         img: pizza1,
+    //         img: pizza1,
+    //         name: "Чикен Сладкий Чили",
+    //         info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+    //         price: 399,
+    //         xit: "ХИТ",
+    //         gramm: 400
+    //     },
+    //     {
+    //         id: 12,
+    //         img: pizza1,
+    //         img: pizza1,
+    //         name: "Чикен Сладкий Чили",
+    //         info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+    //         price: 399,
+    //         xit: "ХИТ",
+    //         gramm: 400
+    //     },
+    //     {
+    //         id: 13,
+    //         img: pizza1,
+    //         name: "Чикен Сладкий Чили",
+    //         info: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+    //         price: 399,
+    //         xit: "ХИТ",
+    //         gramm: 400
+    //     },
+
+    // ])
     const [pizzaCmm, setPizzaCmm] = useState('300px')
     const [div, setDiv] = useState('allBox')
     const [colorWithe1, setColor1] = useState('colorWith')
@@ -257,12 +266,12 @@ export default function AllPizza({ sliceData, addProduct,  }) {
             <div className="Pizzas">
 
                 {        
-                    sliceData ?
-                        pizza.slice(0, sliceData).map((item, index) => (
-                            <OnePizza setDiv={setDiv} addOn={addOn} openBox={openBox} item={item} />
-                        ))
-                        :
-                        pizza.map((item, index) => (
+                    // sliceData ?
+                    //     pizza.slice(0, sliceData).map((item, index) => (
+                    //         <OnePizza setDiv={setDiv} addOn={addOn} openBox={openBox} item={item} />
+                    //     ))
+                    //     :
+                        pizza.map((item) => (
                             <OnePizza setDiv={setDiv} addOn={addOn} openBox={openBox} item={item} />
                         ))
                 }
