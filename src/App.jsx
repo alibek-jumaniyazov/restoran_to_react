@@ -8,7 +8,9 @@ import { useState } from "react";
 function App() {
   const [zakaz , setZakaz] = useState(  JSON.parse(localStorage.getItem('zakaz')) || [])
 
-localStorage.setItem('zakaz', JSON.stringify(zakaz))
+  localStorage.setItem('zakaz', JSON.stringify(zakaz))
+
+const [total , setTotal] = useState(0)
 
   function addZakazProduct(id, img, name,info,sm,price,){
       setZakaz(value => [...value, {
@@ -21,17 +23,16 @@ localStorage.setItem('zakaz', JSON.stringify(zakaz))
         }])
   }
   
-  console.log(zakaz);
 
   return (
     <div className="App">
       <Routes>
-        <Route  path="/" element={<Home addZakazProduct={addZakazProduct}/>} />
+        <Route  path="/" element={<Home total={total} setTotal={setTotal} addZakazProduct={addZakazProduct}/>} />
       </Routes>
       <div className="container">
         <Routes>
-          <Route  path="/pizza" element={<Pizza addZakazProduct={addZakazProduct}/>} />
-          <Route  path="/zakaz" element={<Zakaz zakaz={zakaz} />} />
+          <Route  path="/pizza" element={<Pizza total={total} setTotal={setTotal} addZakazProduct={addZakazProduct}/>} />
+          <Route  path="/zakaz" element={<Zakaz total={total} setTotal={setTotal} setZakaz={setZakaz} zakaz={zakaz} />} />
         </Routes>
       </div>
 

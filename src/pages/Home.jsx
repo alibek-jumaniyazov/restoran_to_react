@@ -16,7 +16,7 @@ import Location from "../components/Location";
 import AllPizza from "../components/AllPizza";
 
 
-export default function Home({addZakazProduct}) {
+export default function Home({addZakazProduct,setTotal ,total}) {
   const [box, setBox] = useState([
     {
       img: aksiya,
@@ -96,7 +96,7 @@ const [son2,setSon2] = useState(0)
 
   return (
     <div className="Home">
-      <HomeHeader setSon2={setSon2} son2={son2}  karzinka={karzinka} />
+      <HomeHeader total={total} setTotal={setTotal} setSon2={setSon2} son2={son2} setKarzinka={setKarzinka}  karzinka={karzinka} />
       <div className="boxes">
         {
           box.map((item) => (
@@ -112,7 +112,7 @@ const [son2,setSon2] = useState(0)
         }
       </div>
       <Location />
-      <AllPizza setSon2={setSon2} son2={son2}  addProduct={addProduct} />
+      <AllPizza setSon2={setSon2} son2={son2} sliceData={8}  addProduct={addProduct} />
     </div>
   )
 }

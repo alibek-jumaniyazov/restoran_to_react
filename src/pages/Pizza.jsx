@@ -2,7 +2,7 @@ import { useState } from "react";
 import AllPizza from "../components/AllPizza";
 import Header from "../components/Header";
 
-export default function Pizza({addZakazProduct}){
+export default function Pizza({addZakazProduct , setTotal ,total}){
 
     const [karzinka , setKarzinka] = useState(JSON.parse(localStorage.getItem('add')) || [])
 
@@ -49,7 +49,7 @@ export default function Pizza({addZakazProduct}){
     // localStorage.setItem('son', JSON.stringify(son2))
     return(
         <div className="Pizza">
-            <Header son2={son2} karzinka={karzinka}/>
+            <Header total={total} setTotal={setTotal} son2={son2} karzinka={karzinka} setKarzinka={setKarzinka}/>
             <AllPizza setSon2={setSon2} son2={son2} addProduct={addProduct}/>
         </div>
         

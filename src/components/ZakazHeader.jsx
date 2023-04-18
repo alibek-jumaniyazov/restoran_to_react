@@ -3,7 +3,7 @@ import location from '../images/Location.svg'
 import user from '../images/Account.svg'
 import down from '../images/Arrow down.svg'
 
-export default function ZakazHeader() {
+export default function ZakazHeader({setTotal ,total}) {
     
 
 
@@ -33,7 +33,7 @@ export default function ZakazHeader() {
                 </div>
             </nav>
             <hr />
-                <Header/>
+                <Header total={total} setTotal={setTotal}/>
 
         </div>
 

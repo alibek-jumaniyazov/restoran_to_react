@@ -6,10 +6,9 @@ import x from '../images/Union.svg'
 import KarzinkaPizza from './KarzinkaPizza'
 import { useState, memo } from 'react'
 
-export default function Header({ karzinka ,}) {
+export default function Header({ karzinka , setKarzinka ,setTotal ,total}) {
 
 
-    const [total , setTotal] = useState( 0)
 //  JSON.parse(localStorage.getItem('total')) ||
     // localStorage.setItem('total', JSON.stringify(total))
 
@@ -22,7 +21,6 @@ export default function Header({ karzinka ,}) {
     function Close() {
         setKarzinkADiv('allBox')
     }
-
 
     return (
         <div className="HomeHeader">
@@ -59,7 +57,7 @@ export default function Header({ karzinka ,}) {
 
                         {
                             karzinka?.map((add) => ( 
-                               <KarzinkaPizza  total={total} setTotal={setTotal} add={add}/> 
+                               <KarzinkaPizza karzinka={karzinka} setKarzinka={setKarzinka}  total={total} setTotal={setTotal} add={add}/> 
                             ))
                         }
                         

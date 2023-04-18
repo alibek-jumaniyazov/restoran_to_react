@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import KarzinkaPizza from './KarzinkaPizza'
 
-export default function HomeHeader({ karzinka }) {
-    const [total , setTotal] = useState(0)
+export default function HomeHeader({ karzinka ,setKarzinka ,setTotal ,total }) {
+
 
 
 // JSON.parse(localStorage.getItem('total')) ||
@@ -73,7 +73,7 @@ export default function HomeHeader({ karzinka }) {
                     <div className="products">
                         {
                             karzinka.map((add) => (
-                               <KarzinkaPizza total={total} setTotal={setTotal} add={add}/> 
+                               <KarzinkaPizza setKarzinka={setKarzinka} karzinka={karzinka} total={total} setTotal={setTotal} add={add}/> 
                             ))
                         }
                         

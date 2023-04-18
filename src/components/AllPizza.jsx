@@ -266,11 +266,11 @@ export default function AllPizza({ sliceData, addProduct,  }) {
             <div className="Pizzas">
 
                 {        
-                    // sliceData ?
-                    //     pizza.slice(0, sliceData).map((item, index) => (
-                    //         <OnePizza setDiv={setDiv} addOn={addOn} openBox={openBox} item={item} />
-                    //     ))
-                    //     :
+                    sliceData ?
+                        pizza.slice(0, sliceData).map((item, index) => (
+                            <OnePizza setDiv={setDiv} addOn={addOn} openBox={openBox} item={item} />
+                        ))
+                        :
                         pizza.map((item) => (
                             <OnePizza setDiv={setDiv} addOn={addOn} openBox={openBox} item={item} />
                         ))
@@ -282,7 +282,7 @@ export default function AllPizza({ sliceData, addProduct,  }) {
                         PizzaOnclick.map((item) => (
                             <div className="productAddToCard">
                                 <div className="kardImgSize">
-                                    <img style={{ width: `${pizzaCmm}` }} className='pizzaBig' src={item.img} alt="" />
+                                    <img style={{ width: `${pizzaCmm}`, height: `${pizzaCmm}` }} className='pizzaBig' src={item.img} alt="" />
                                 </div>
 
                                 <div className="addCardInfo">

@@ -1,22 +1,26 @@
 import { useState } from "react"
 
-export default function ZakazPizza({ add }) {
+export default function ZakazPizza({ add , zakaz ,setZakaz ,setTotal }) {
     const [son, setSon] = useState(JSON.parse(localStorage.getItem('sonn')) || 1)
 
     localStorage.setItem('sonn', JSON.stringify(son))
 
-    function Minus() {
+    let totall = 0
+
+    function Minus(id) {
         setSon(son - 1)
-        if (son == 0) {
-            setSon(son + 0)
-          }
+        if (son == 1 || son < 1) {
+            const newData = zakaz.filter((value) => value.id !== id)
+            setZakaz(newData)
+            setTotal(0)
+        }   
     }
 
     function Pilus() {
         setSon(son + 1)
     }
 
-    
+    setTotal(totall += add.price * son);
     return (
         <div className="ZakazPizza">
             <div className="pizzaImgInfo">
@@ -28,7 +32,7 @@ export default function ZakazPizza({ add }) {
             </div>
             <div className="pizzaCountPrice">
                 <div className='productCounter'>
-                    <span onClick={() => Minus()}>-</span>  <p>{son}</p> <span onClick={() => Pilus()} >+</span>
+                    <span onClick={() => Minus(add.id)}>-</span>  <p>{son}</p> <span onClick={() => Pilus()} >+</span>
                 </div>
                 <span className="zakazPrice">{`${add.price * son} ₽`}</span>
             </div>
