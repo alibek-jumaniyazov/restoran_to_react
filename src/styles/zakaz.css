@@ -115,3 +115,10 @@
     text-align: right;
     color: #FF7010;
 }
+
+.zakazs{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}

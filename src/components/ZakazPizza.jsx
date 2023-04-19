@@ -7,13 +7,17 @@ export default function ZakazPizza({ add , zakaz ,setZakaz ,setTotal }) {
 
     let totall = 0
 
+    if(son == -14)(
+        setSon(1)
+    )
+
     function Minus(id) {
         setSon(son - 1)
         if (son == 1 || son < 1) {
             const newData = zakaz.filter((value) => value.id !== id)
             setZakaz(newData)
             setTotal(0)
-        }   
+        }
     }
 
     function Pilus() {

@@ -8,7 +8,7 @@ export default function KarzinkaPizza({ add, setTotal, karzinka, setKarzinka }) 
     localStorage.setItem('sonn', JSON.stringify(son))
 
     let totall = 0
-    if(son == -14)(
+    if(son <= -1)(
         setSon(1)
     )
 
