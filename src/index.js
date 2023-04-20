@@ -20,4 +20,3 @@ root.render(
 // let a = prompt()
 
 // console.log(isNaN(a) && /\d/.test(a))
-

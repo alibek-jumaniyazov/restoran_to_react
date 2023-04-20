@@ -282,7 +282,7 @@ header {
     height: 36px;
     background: #FFEEE2;
     border-radius: 6px;
-
+    user-select: none;
 }
 
 .productCounter p {
@@ -301,6 +301,7 @@ header {
     cursor: pointer;
     color: #FF7010;
     transition: all 0.4s ease;
+    user-select: none;
 }
 
 .productCounter span:active {

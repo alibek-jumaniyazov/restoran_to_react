@@ -1,4 +1,4 @@
-export default function OnePizza({ item, kz ,addOn, openBox }) {
+export default function OnePizza({ item,   openBox }) {
     return (
         <div className="OnePizza">
             <p className="xit">{item.xit}</p>
@@ -7,7 +7,7 @@ export default function OnePizza({ item, kz ,addOn, openBox }) {
                 <p>{item.name}</p>
                 <span>{item.info}</span>
                 <div className="addBtn">
-                    <a onClick={() => openBox(item.id, item.img, item.name, item.info, item.price, item.gramm)} className="btnPizza">Выбрать</a>
+                    <a onClick={() => openBox(item.id, item.img, item.name, item.info, item.price,item.xit, item.gramm ,item.count)} className="btnPizza">Выбрать</a>
                 <h3>от {item.price} ₽</h3>
             </div>
         </div>

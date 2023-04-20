@@ -214,33 +214,36 @@ export default function AllPizza({ sliceData, addProduct,  }) {
 
     const [PizzaOnclick, setPizzaOnclick] = useState([])
 
-    function PizzaOonclick(id, img, name, price, gramm) {
+    function PizzaOonclick(id, img, name, info, price,xit, gramm ,count) {
         setPizzaOnclick([
             {
                 id: id,
                 img: img,
                 name: name,
+                info: info,
                 price: price,
-                gramm: gramm
+                xit:xit,
+                gramm: gramm,
+                count:count
             }
         ])
         
     }
 
-    function openBox(id, img, name, info, price, gramm){
+    function openBox(id, img, name, info, price ,xit , gramm ,count){
         setDiv('add')
-        PizzaOonclick(id, img, name, price, gramm)
+        PizzaOonclick(id, img, name, info, price ,xit , gramm ,count)
         
     }
 
     let addOn = false
-    function productADD(id,name, img, price,) {
+    function productADD(id, img, name, info, price ,xit , gramm ,count) {
 
         addOn = true
         setDiv('allBox')
         {
             addOn == true ? 
-            addProduct(id, img, name, tonke , sm, price,)
+            addProduct(id, img, name, info, price ,xit , gramm ,count,tonke,sm)
             
             :
             addProduct()
@@ -284,7 +287,6 @@ export default function AllPizza({ sliceData, addProduct,  }) {
                                 <div className="kardImgSize">
                                     <img style={{ width: `${pizzaCmm}`, height: `${pizzaCmm}` }} className='pizzaBig' src={item.img} alt="" />
                                 </div>
-
                                 <div className="addCardInfo">
                                     <p>Пепперони по-деревенски</p>
                                     <div className="savzavot">
@@ -368,7 +370,7 @@ export default function AllPizza({ sliceData, addProduct,  }) {
                                             <span className='gramm'>{item.gramm} г</span>
                                         </div>
 
-                                        <span className='addProductbtn' onClick={() => productADD(item.id, item.name, item.img , item.price)}>Add</span>
+                                        <span className='addProductbtn' onClick={() => productADD(item.id, item.img, item.name, item.info, item.price,item.xit, item.gramm ,item.count)}>Add</span>
                                     </div>
                                 </div>
                             </div>

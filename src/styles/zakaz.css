@@ -116,9 +116,80 @@
     color: #FF7010;
 }
 
-.zakazs{
+.zakazs {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    
+    gap: 24px;
+}
+
+.allPrice {
+    width: 850px;
+    height: 80px;
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+}
+
+.Promo {
+
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    border-radius: 6px;
+    height: 48px;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2px;
+}
+
+.Promo input {
+    outline: none;
+    border: none;
+    padding: 13px;
+}
+
+.Promo input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #A5A5A5;
+}
+
+.promoBtn {
+    width: 48px;
+    height: 48px;
+    background: #FF7010;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.promoBtn img {
+    transition: all 0.4s ease;
+}
+
+.promoBtn:active img {
+    transform: translateX(10px);
+    transition: all 0.4s ease;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #FF7010;
 }

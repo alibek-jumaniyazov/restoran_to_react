@@ -1,0 +1,39 @@
+.registration-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1d1f21;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+}
+
+.registration-form h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: flex;
+  justify-content:center
+}

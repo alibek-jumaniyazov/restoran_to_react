@@ -77,17 +77,20 @@ export default function Home({addZakazProduct,setTotal ,total}) {
   localStorage.setItem('add', JSON.stringify(karzinka))
 
 
-  function addProduct(id, img, name,info,sm,price,xit){
+  function addProduct(id, img, name, info, price ,xit , gramm ,count,tonke,sm){
     setKarzinka(value => [...value, {
-        id: id,
-        img: img,
-        name: name,
-        info: info,
-        sm: sm,
-        price: price,
-        xit: xit,
+      id: id,
+      img: img,
+      name: name,
+      info: info,
+      price: price,
+      xit: xit,
+      gramm: gramm,
+      count: count,
+      tonke: tonke,
+      sm: sm,
       }])
-      addZakazProduct(id, img, name,info,sm,price)
+      addZakazProduct(id, img, name, info, price, xit, gramm, count, tonke, sm)
 }
 
 const [son2,setSon2] = useState(0)
