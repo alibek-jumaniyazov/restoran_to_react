@@ -4,6 +4,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import './styles/app.css'
 import './styles/home.css'
+import './styles/login.css'
 import './styles/zakaz.css'
 import './styles/pizza.css'
 import './styles/header.css'

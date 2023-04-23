@@ -43,9 +43,6 @@
     justify-content: flex-start;
     align-items: center;
     gap: 16px;
-    height: 670px;
-    overflow-y: scroll;
-
 }
 
 .ZakazPizza {
@@ -192,4 +189,20 @@
     align-items: center;
     text-align: right;
     color: #FF7010;
+}
+.addKarzinkazakaz{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.dobovizZakaz{
+
+    color: #191919;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    
 }

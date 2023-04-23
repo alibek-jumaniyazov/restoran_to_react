@@ -3,6 +3,7 @@ import { useState } from "react";
 import ZakazHeader from "../components/ZakazHeader";
 import ZakazPizza from "../components/ZakazPizza";
 import PromoBtn from "../images/Vector (2).svg"
+
 export default function Zakaz({ zakaz, setZakaz, setTotal, total }) {
 
 
@@ -30,7 +31,12 @@ export default function Zakaz({ zakaz, setZakaz, setTotal, total }) {
                         </p>
                     </div>
                 </div>
-
+                <div className="addKarzinkazakaz">
+                    <p className="dobovizZakaz" >Добавить к заказу?</p>
+                    <div className="Karusel">
+                        
+                    </div>
+                </div>
             </div>
         </div>
     )

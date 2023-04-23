@@ -1,39 +1,108 @@
-.registration-form-container {
+form {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #1d1f21;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.registration-form {
-  display: flex;
   flex-direction: column;
+  width: 500px;
+  height: 400px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 24px;
+}
+.loginLogo{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #FF7010;
+  font-size: 25px;
+  font-weight: 600;
+}
+.inputGroup {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 1em 0 1em 0;
+  max-width: 250px;
+  position: relative;
+}
+
+.inputGroup input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.inputGroup label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+
+.inputGroup :is(input:focus, input:valid)~label {
+  transform: translateX(-100%);
+  color: #FF7010;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: #FF7010;
+}
+
+.btnLogin {
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
-  padding: 50px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  background-color: #ffffff;
+  padding: 13px 35px;
+  background: #FF7010;
+  border-radius: 6px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  border: none;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 
-.registration-form h2 {
-  margin-bottom: 20px;
-  font-size: 28px;
-  font-weight: bold;
-  color: #333333;
+.btnLogin:active {
+  scale: 80%;
+  transition: all 0.4s ease;
 }
 
-.form-group {
+.loginPage {
   display: flex;
+  justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
   width: 100%;
-  margin-bottom: 20px;
+  height: 100%;
+  background: rgba(25, 25, 25, 0.4);
+  backdrop-filter: blur(16px);
+  z-index: 9999999999;
 }
-
-.form-group label {
+.none{
+  display: none!important;
+}
+.loginX{
   display: flex;
-  justify-content:center
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+}
+.loginX img{
+  transition: all 0.4s ease;
+  cursor: pointer;
+  width: 27 px;
+}
+.loginX img:active{
+  scale: 80%;
+  transition: all 0.4s ease;
 }

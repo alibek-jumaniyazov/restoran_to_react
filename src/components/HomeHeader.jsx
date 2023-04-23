@@ -7,6 +7,8 @@ import down from '../images/Arrow down.svg'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import KarzinkaPizza from './KarzinkaPizza'
+import Login from '../pages/Login'
+import xx from '../images/Cross.svg'
 
 export default function HomeHeader({ karzinka ,setKarzinka ,setTotal ,total }) {
 
@@ -24,9 +26,15 @@ export default function HomeHeader({ karzinka ,setKarzinka ,setTotal ,total }) {
     function Close() {
         setKarzinkADiv('allBox')
     }
+const [login , setLogin] = useState("none")
 
+    function addLogin(){
+        setLogin("loginPage")
+    }
 
-
+    function loginClose(){
+        setLogin("none")
+    }
 
     return (
         <div className="HomeHeader">
@@ -47,7 +55,7 @@ export default function HomeHeader({ karzinka ,setKarzinka ,setTotal ,total }) {
                     <p className='navP'>Время работы: с 11:00 до 23:00</p>
                     <div className="accaunt">
                         <img src={user} alt="" />
-                        <p className='navP'>Войти в аккаунт</p>
+                        <p onClick={() => addLogin()} className='navP'>Войти в аккаунт</p>
                     </div>
                 </div>
             </nav>
@@ -85,7 +93,13 @@ export default function HomeHeader({ karzinka ,setKarzinka ,setTotal ,total }) {
                         }
                     </div>
                 </div>
-            </div>      
+            </div>  
+            <div className={login}>
+                <div className="loginX">
+                     <Login/>
+                     <img onClick={() => loginClose()} src={xx} alt="" />
+                </div>
+            </div>    
         </div>
     )
 }
