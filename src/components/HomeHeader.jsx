@@ -9,6 +9,7 @@ import { useState } from 'react'
 import KarzinkaPizza from './KarzinkaPizza'
 import Login from '../pages/Login'
 import xx from '../images/Cross.svg'
+import Register from './Register'
 
 export default function HomeHeader({ karzinka ,setKarzinka ,setTotal ,total }) {
 
@@ -35,6 +36,8 @@ const [login , setLogin] = useState("none")
     function loginClose(){
         setLogin("none")
     }
+
+    const [regiter , setRegister] = useState('true')
 
     return (
         <div className="HomeHeader">
@@ -96,7 +99,14 @@ const [login , setLogin] = useState("none")
             </div>  
             <div className={login}>
                 <div className="loginX">
-                     <Login/>
+                    {
+                        regiter == 'true' ?
+                        <Login setRegister={setRegister}/>
+                        :
+
+                        <Register setRegister={setRegister}/>
+                    }
+
                      <img onClick={() => loginClose()} src={xx} alt="" />
                 </div>
             </div>    

@@ -4,13 +4,15 @@ form {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 500px;
-  height: 400px;
-  background-color: white;
   padding: 25px;
+  width: 850px;
+  height: 444px;
+  background: #F9F9F9;
   border-radius: 24px;
+  gap: 16px;
 }
-.loginLogo{
+
+.loginLogo {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -18,11 +20,14 @@ form {
   font-size: 25px;
   font-weight: 600;
 }
+
 .inputGroup {
   font-family: 'Segoe UI', sans-serif;
   margin: 1em 0 1em 0;
-  max-width: 250px;
   position: relative;
+  height: 48px;
+  width: 300px;
+  gap: 8px;
 }
 
 .inputGroup input {
@@ -31,8 +36,12 @@ form {
   outline: none;
   border: 2px solid rgb(200, 200, 200);
   background-color: transparent;
-  border-radius: 20px;
   width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #F0F0F0;
+  border-radius: 6px;
+  border-radius: 6px;
+
 }
 
 .inputGroup label {
@@ -59,9 +68,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 13px 35px;
   background: #FF7010;
-  border-radius: 6px;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -69,6 +76,11 @@ form {
   border: none;
   transition: all 0.4s ease;
   cursor: pointer;
+  padding: 13px 40px;
+  gap: 10px;
+  width: 300px;
+  height: 48px;
+  border-radius: 6px;
 }
 
 .btnLogin:active {
@@ -88,21 +100,67 @@ form {
   backdrop-filter: blur(16px);
   z-index: 9999999999;
 }
-.none{
-  display: none!important;
+
+.none {
+  display: none !important;
 }
-.loginX{
+
+.loginX {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 30px;
 }
-.loginX img{
+
+.loginX img {
   transition: all 0.4s ease;
   cursor: pointer;
-  width: 27 px;
+  width: 27px;
 }
-.loginX img:active{
+
+.loginX img:active {
   scale: 80%;
   transition: all 0.4s ease;
+}
+
+.registerTitle {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #191919;
+  width: 240px;
+  height: 40px;
+}
+
+form span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #191919;
+  width: 380px;
+  height: 44px;
+}
+
+.inputGroup p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: #A5A5A5;
+}
+
+.loginFootertext{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #191919;
+  opacity: 0.4;
+  width: 320px;
+  height: 54px;
 }

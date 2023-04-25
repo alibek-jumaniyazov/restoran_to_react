@@ -1,27 +1,18 @@
 import React, { useState } from 'react';
 import "../styles/login.css"
-import LogoName from '../images/Group 152.svg'
 
-function Login() {
-  const [name, setName] = useState("");
-  const [password1, setPassword1] = useState("");
+function Login({setRegister}) {
   const [password, setPassword] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (name.trim() === "" || password1.trim() === "" || password.trim() === "") {
+    if (password.trim() === "") {
       alert("Please fill in all fields.");
     }
-     if (password1.length < 8) {
-      alert("Password must be at least 8 characters.");
-    }  else if (password != password1) {
-      alert("Parollar bir biri bilan teng emas  "); 
-     } else {
-      console.log("Name:", name);
-      console.log("Password", password1);
-      console.log("Password:", password);
-
+    if (password.length > 9) {
+      alert("Password must be at least 9 characters.");
+    } else {
       // submit the form
     }
   };
@@ -29,48 +20,28 @@ function Login() {
   return (
     <form onSubmit={handleSubmit}>
 
-    <p className='loginLogo'  >Register</p>
+
+      <h1 className="registerTitle">Вход в аккаунт</h1>
+      <span>Сможете быстро оформлять заказы,
+        использовать бонусы</span>
 
       <div class="inputGroup">
+        <p>Номер телефона</p>
         <input
-          type="text"
-          id="name"
-          name="name"
-          value={name}
-          autocomplete="off"
-          onChange={(event) => setName(event.target.value)}
-          required
-        />
-        <label for="name">Name</label>
-      </div>
-
-
-      <div class="inputGroup">
-      <input
-          type="password"
-          id="password"
-          name="password"
-          value={password1}
-          autocomplete="off"
-          onChange={(event) => setPassword1(event.target.value)}
-          minLength={8}
-          required
-        />
-        <label for="name">Password</label>
-      </div>
-      <div class="inputGroup">
-        <input
-          type="password"
-          id="password"
-          name="password"
+          type="tel"
+          id="tel"
+          name="tel"
           value={password}
           autocomplete="off"
           onChange={(event) => setPassword(event.target.value)}
           required
+          minLength={9}
         />
-        <label for="name">Password</label>
+        <label for="name">+998</label>
       </div>
-      <button className='btnLogin' type="submit">Register</button>
+      <button className='btnLogin' type="submit">Войти</button>
+      <p onClick={() => setRegister("false")}>Registratsiya</p>
+      <p className='loginFootertext'>Продолжая, вы соглашаетесь со сбором и обработкой персональных данных и пользовательским соглашением</p>
     </form>
   );
 }
