@@ -21,7 +21,6 @@ function Register({setRegister}) {
             if (password.length == 9 && name.trim() != "") {
                 setRegister("true")
               }
-            
         }
   return (
     <form onSubmit={handleSubmit}>
